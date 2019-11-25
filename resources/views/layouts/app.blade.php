@@ -51,21 +51,70 @@
                 <a target="_blank" href="http://lmts.uag.ufrpe.br/">
                   <img src="{{asset('images/lmts.jpg')}}" style = "margin-left: 8px; margin-top:65px " height="80" align = "right" >
                 </a>
+                <img src="{{asset('images/separador.png')}}" style = "margin-left: 15px; margin-top: 65px" height="70" align = "right">
 
+                <a target="_blank" href="http://www.preg.ufrpe.br/">
+                  <img src="{{asset('images/logoPreg.png')}}" style = "margin-left: 10px; margin-top: 65px" height="80" width="150" align = "right" >
+                </a>
                 <img src="{{asset('images/separador.png')}}" style = "margin-left: 15px; margin-top: 65px" height="70" align = "right">
 
                 <a target="_blank" href="http://ww3.uag.ufrpe.br/">
                   <img src="{{asset('images/uag.png')}}" style = "margin-left: 10px; margin-top: 65px" height="80" width="70" align = "right" >
                 </a>
-
                 <img src="{{asset('images/separador.png')}}" style = "margin-left: 15px; margin-top: 65px" height="70" align = "right" >
 
                 <a target="_blank" href="http://www.ufrpe.br/">
                   <img src="{{asset('images/ufrpe.png')}}" style = "margin-left: 15px; margin-right: -10px; margin-top: 65px " height="80" width="70" align = "right">
                 </a>
+
             </li>
         </ul>
     </div>
+
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #1B2E4F; border-color: #d3e0e9; box-shadow: 0 0 6px rgba(0,0,0,0.5);" role="navigation">
+      <a class="navbar-brand" href="{{ route('login') }}" style="color: white; font-weight: bold;">
+        <img src="{{asset('images/home.png')}}" height="20" class="d-inline-block align-top" alt="">
+      @auth
+      @endauth
+      </a>
+        <div class="collapse navbar-collapse" >
+          <ul class="navbar-nav mr-auto">
+          </ul>
+        </div>
+        <div class="nav navbar-nav navbar-right" >
+          <ul class="nav navbar-nav">
+              @if(Auth::check())
+              <li>
+              <a class="nav-link"  href="{{ route('login') }}"
+                 onclick="event.preventDefault();
+                               document.getElementById('usuario-form').submit();"style="color:white;">
+                 {{Auth::user()->name}}
+              </a>
+              <form id="usuario-form" action="{{ route('login') }}" method="GET" style="display: none;">
+                  @csrf
+              </form>
+            </li>
+              @endif
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              @if(Auth::check())
+                <li> <!--  logout   -->
+                    <a class="nav-link"  href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();"style="color:white;margin-right:20px">
+                       {{ __('Sair') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </li>
+            @endif
+          </ul>
+        </div>
+      </nav>
+    <!-- @php($url = str_replace(URL::to('/'),'',URL::current())) -->
+<!-- NAVBAR -->
 
     <div id="page-container" style="background-color:#FFFFFF">
       <div id="content-wrap">
