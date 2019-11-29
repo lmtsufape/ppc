@@ -3,13 +3,30 @@ body{
     padding: 0px;
 
 }
+input{
+  margin-bottom: 20px;
+}
+
+/* ----------- Tabela lmts ----------------*/
+.titulo-tabela-lmts{
 
 
-.lmts-primary{
-    background-color: #1B2E4F;
-    color:white;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 1%;
+  /* margin-left: 20px; */
+  border-bottom: #1b2e4f solid 2px;
+
 
 }
+.table th{
+      background-color: #1B2E4F;
+      color: #FFF;
+
+}
+
+
+/* --------------------------------------- */
 
 .info{
     width: 100%;
@@ -42,7 +59,6 @@ body{
     font-size: 16px;
     font-size: 20px;
 }
-
 
 
 .text-center{
@@ -90,14 +106,12 @@ body{
 
 .tela-servidor{
     width: 100%;
-    height: 730px;
 
 }
 
 
 .conteudo-central{
-    width: 100%;
-    height: 300px;
+    width: 1000px;
     margin: 0;
     padding: 0;
 
@@ -110,7 +124,7 @@ body{
     height: 250px;
     float: left;
     border-radius: 20px;
-    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .cartao h2{
@@ -118,39 +132,185 @@ body{
 }
 
 .cartao:hover{
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /*Valor1 = Posição y | Valor2 = Posição x | Valor3 = blur | Valor4 = CorP*/
+    box-shadow: 0 0 13px rgba(0,0,0,0.5); /*Valor1 = Posição y | Valor2 = Posição x | Valor3 = blur | Valor4 = CorP*/
 }
 
 .centro-cartao{
     padding-top: 50px;
 
-    height: 50vh;
-    /* background-color: #ddd; */
+    height: 730px;
+    background-color: #fff;
 }
 
-/*Tabelas*/
 
-.tabela-centro{
-    width: 80%;
 
+
+
+.separador-lmts{     /*       Separador de navbar */
+  color: white;
+  font-weight: bold;
+  font-size: 20;
+  margin-top: 6px;
+}
+
+/* Botão com cor padrão do lmts */
+
+.btn-primary-lmts{
+  background-color: #1B2E4F;
+  border-color: #d3e0e9;
+  color: white;
+  border-radius: 70px;
+}
+.btn-primary-lmts:disabled{
+  background-color: #1B2E4F;
+  border-color: #d3e0e9;
+  color: white;
+border-radius: 70px;
+}
+.btn-primary-lmts:hover{
+  background-color: #2c4e8a;
+  border-color: #d3e0e9;
+  color: white;
+border-radius: 70px;
+}
+
+/* badge lmts */
+
+.badge-lmts{
+  padding: 5px;
+  color: white;
+  font-size: 13px;
+  background-color: #67748B;
+  margin-left: 5px;
+  margin-top: 5px;
 
 }
 
-.nome-documento{
-
-    height: 50px;
-    margin-bottom: 0;
-    border: 0px;
-
-    text-align: center;
+/* pagination */
+.pagination > .active > li > a
+{
+    background-color: #2c4e8a;
+    color: #1B2E4F;
 }
 
-@media screen and (max-width: 359px) {
+.pagination > .active > li > span
+{
+    background-color: #1B2E4F;
+    color: #1B2E4F;
+}
 
-  .cartao{
-    background-color: blue;
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: white;
+    background-color: #2c4e8a;
+    border-color: #d3e0e9;
+}
 
+.pagination > .active > a
+{
+    color: white;
+    background-color: #1B2E4F;
+    border: solid 1px #1B2E4F;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #1B2E4F;
+    border: solid 1px #1B2E4F;
+}
+
+
+.page-item.active .page-link {
+  background-color: #1B2E4F;
+  border-color: #1B2E4F;
+
+}
+
+.ajuda-lmts {
+  width: 20px;
+}
+
+.ajuda-lmts:hover {
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+
+.hover-popup-lmts a {
+  position:relative;
+}
+
+.hover-popup-lmts a span {
+  position:absolute; display:none; z-index:99;
+}
+
+.hover-popup-lmts a:hover span {
+  display:block; height: 100px;
+  overflow: visible;
+}
+.card{
+  margin-top: 20px;
+
+}
+.card-header{
+  background-color: #1B2E4F;
+  color: white;
+  font-size: 20px;
+}
+
+.disabled-lmts{
+  background-color: #67748B;
+}
+
+/* detalhes edital */
+
+.card-lmts-options{
+  margin-top: 8%;
+  overflow: auto;
+}
+
+
+
+
+
+/* AUTO COMPLETE */
+
+
+  .autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
   }
 
+  .autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  }
 
-}
+  .autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+  }
+
+  .autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+  }
+
+  .autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
