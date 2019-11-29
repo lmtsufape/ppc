@@ -43,7 +43,7 @@
 
 #page-container {
   position: relative;
-  min-height: 90vh;
+  min-height: 70vh;
 }
 
 #content-wrap {
@@ -136,17 +136,18 @@ div.hifen {
 
 .panel-default > .panel-heading {
   color: #454040;
-  border: #12583C;
+  border: #1B2E4F;
 }
 
 .panel-default{
+  margin: 20px;
   border: none;
   border-radius:20px;
 }
 
 .navbar-default .navbar-nav > .dropdown > a:focus, .navbar-default .navbar-nav > .dropdown > a:hover {
   color: #fff;
-  background-color: #12583c;
+  background-color: #1B2E4F;
 }
 
 /* Select2 Selects CSS - Start */
@@ -344,7 +345,7 @@ background-color: #3097D1;
 }
 
 .btn-primary{
-  background-color: #12583C;
+  background-color: #1B2E4F;
   border-color: #d3e0e9;
   color: white;
   border-radius: 15px;
@@ -352,7 +353,7 @@ background-color: #3097D1;
 }
 
 .btn-primary:visited{
-  background-color: #12583C;
+  background-color: #1B2E4F;
   border-color: #d3e0e9;
   color: white;
   border-radius: 15px;
@@ -360,14 +361,14 @@ background-color: #3097D1;
 }
 
 .btn-primary:disabled{
-  background-color: #12583C;
+  background-color: #1B2E4F;
   border-color: #d3e0e9;
   color: white;
   border-radius: 15px
 }
 
 .btn-primary:hover{
-  background-color: #12583C;
+  background-color: #1B2E4F;
   border-color: #d3e0e9;
   border-radius: 15px
   color: white;
@@ -375,24 +376,24 @@ background-color: #3097D1;
 
 .btn-secondary{
   background-color: #ffffff;
-  border-color: #12583C;
-  color: #12583C;
+  border-color: #1B2E4F;
+  color: #1B2E4F;
   border-radius: 15px;
   width: 139px;
 }
 
 .btn-secondary:disabled{
   background-color: #ffffff;
-  border-color: #12583C;
-  color: #12583C;
+  border-color: #1B2E4F;
+  color: #1B2E4F;
   border-radius: 15px
 }
 
 .btn-secondary:hover{
   background-color: #ffffff;
-  border-color: #12583C;
+  border-color: #1B2E4F;
   border-radius: 15px
-  color: #12583C;
+  color: #1B2E4F;
 }
 
 .btn-danger{
@@ -436,22 +437,22 @@ h1{
 
 /* link que ainda não foi visitado */
 a:link {
-   color: #12583C;
+   color: #1B2E4F;
 }
 
 /* link que foi visitado */
 a:visited {
-    color: #12583C;
+    color: #1B2E4F;
 }
 
 /* mouse over */
 a:hover {
-    color: #12583C;
+    color: #1B2E4F;
 }
 
 /* link selecionado */
 a:active {
-    color: #12583C;
+    color: #1B2E4F;
 }
 
 .sombra{
@@ -463,7 +464,7 @@ a:active {
 }
 
 #divBusca{
-  border:solid 2px #12583C;
+  border:solid 2px #1B2E4F;
   border-radius:10px;
   width:300px;
   height:37px;
@@ -488,7 +489,7 @@ a:active {
   border-radius:0 7px 7px 0;
   width:70px;
   color: white;
-  background:#12583C;
+  background:#1B2E4F;
 }
 
 #divBusca i{
@@ -502,7 +503,7 @@ a:active {
   float: left;
   border:solid;
   border-radius: 20px;
-  background-color: #12583C;
+  background-color: #FFFFFF;
 }
 
 a:link div.cartao{

@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Titulo -->
-    <title>@yield('titulo') | PPC</title>
+    <title>@yield('titulo') | Nome do Sistema</title>
 
     <!-- Scripts -->
     <script defer="defer" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
@@ -18,12 +18,17 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/lmts-app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/field-animation.css') }}" rel="stylesheet">
     <link href="{{ asset('css/stylelmts.css') }}" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="">
@@ -89,7 +94,7 @@
               <a class="nav-link"  href="{{ route('login') }}"
                  onclick="event.preventDefault();
                                document.getElementById('usuario-form').submit();"style="color:white;">
-                 {{Auth::user()->name}}
+                 Bem vindo, {{Auth::user()->name}}
               </a>
               <form id="usuario-form" action="{{ route('login') }}" method="GET" style="display: none;">
                   @csrf
