@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/loginApi', 'HomeController@loginApi')->name('loginApi');
 
 
-Route::group(['middleware' => ['lmts']], function(){
+// Route::group(['middleware' => ['lmts']], function(){
   // rotas para preg
   Route::get('/preg/home', 'PregController@index')->name('preg.home');
 
@@ -34,4 +34,4 @@ Route::group(['middleware' => ['lmts']], function(){
   Route::get('/coordenador/ppc/cadastrar', 'PpcController@cadastrar')->name('ppc.cadastrar');
   Route::post('/coordenador/ppc/criar', 'PpcController@criar')->name('ppc.criar');
 
-});
+// });
