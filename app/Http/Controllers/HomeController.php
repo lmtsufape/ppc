@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Lmts\src\controller\LmtsApi;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,9 +12,12 @@ class HomeController extends Controller
      *
      * @return void
      */
+
+    private $api;
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
+        $this->api = new LmtsApi();
     }
 
     /**
@@ -24,5 +28,16 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function loginApi(Request $request){
+      $logado = $this->api->login($request->email, $request->password);
+      if($logado){
+        return redirect()->route('home');
+      }
+      else{
+        return redirect()->route('login')->withInput(['email' => $request->email])
+                                         ->withErrors(['email' => 'E-mail ou Senha incorreta.']);
+      }
     }
 }
