@@ -4,38 +4,51 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">PROCESSOS</div>
 
-                <div class="card-body">
+  <div class="row justify-content-center">
+    <div class="col-sm-12">
 
+      <div class="titulo-tabela-lmts">
+        <h2>PROCESSOS</h2>
+      </div>
 
-                    <div class="card-deck d-flex justify-content-center">
-                      <div class="conteudo-central d-flex justify-content-center">
-
-                        <a href="#" style="text-decoration:none; color: inherit;">
-                          <div class="card cartao text-center " style="border-radius: 30px">
-                            <div class="card-body d-flex justify-content-center">
-                              <h2 style="padding-top:15px">DISPONÍVEL PARA AJUSTES</h2>
-                            </div>
-                          </div>
-                        </a>
-
-                        <a href="#" style="text-decoration:none; color: inherit;">
-                          <div class="card cartao text-center " style="border-radius: 30px">
-                            <div class="card-body d-flex justify-content-center">
-                              <h2 style="padding-top:15px">DISPONÍVEL PARA IMPRESSÃO</h2>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+
+  </div>
+
+  <div class="row justify-content-center">
+      <div class="col-sm-4">
+          <div class="card-ppc" >
+            <a href="#">
+            <div class="card-ppc-header" ><h3>DISPONÍVEL PARA<br>AJUSTES</h3></div>
+            <div class="card-ppc-body">
+              <img class="icone" src="{{asset('images/edit-solid.svg')}}" >
+              
+            </div>
+            </a>
+          </div><!-- end card-->
+      </div>
+
+      <div class="col-sm-4">
+          <div class="card-ppc" >
+            <a href="#">
+            <div class="card-ppc-header"><h3>DISPONÍVEL PARA<br>DOWNLOAD</h3></div>
+            <div class="card-ppc-body">
+              <img class="icone" src="{{asset('images/download-solid.svg')}}"  >
+              
+            </div>
+          </a>
+          </div><!-- end card-->
+      </div>
+
+  </div>
+
+  <div class="row justify-content-center" >
+    <a id="white" class="btn btn-ppc-processo" href="#">
+      PROCESSOS ABERTOS
+    </a>
+
+  </div>
+
 </div>
 @endsection

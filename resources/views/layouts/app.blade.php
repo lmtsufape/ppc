@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Styles -->
+    <script src="https://kit.fontawesome.com/3cf63845d6.js" crossorigin="anonymous"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/lmts-app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/field-animation.css') }}" rel="stylesheet">
