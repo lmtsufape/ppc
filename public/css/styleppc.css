@@ -51,7 +51,29 @@
 .icone{
   width:100px;
 }
+.icone-busca{
+  width:30px;
+}
+/* PPC */
+.header-ppc{
+  background-color: #1b2e4f;
+  color: white;
+  margin-top: 20px;
+  /* padding-top: 1%; */
+  
+  
 
+ 
+}
+.item-header-ppc{
+  height: 100%;
+
+  padding:1%;
+  display:flex;
+  justify-content:left;
+  align-items:center;
+  text-align: center;
+}
 @media (max-width: 576px) {
   .btn-ppc-processo{
     margin-top: 20px;
@@ -69,5 +91,15 @@
     padding: 3% 8% 3%;
     background-color: #1b2e4f;
     color: #ddd;
+  }
+
+  .item-header-ppc{
+    height: 100%;
+  
+    padding:1%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
   }
 }

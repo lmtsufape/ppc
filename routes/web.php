@@ -26,6 +26,7 @@ Route::post('/loginApi', 'HomeController@loginApi')->name('loginApi');
 // Route::group(['middleware' => ['lmts']], function(){
   // rotas para preg
   Route::get('/preg/home', 'PregController@index')->name('preg.home');
+  Route::get('/preg/ppc/finalizados','PregController@finalizados')->name('preg.finalizados');
 
   // rotas para coordenador
   Route::get('/coordenador/home', 'CoordenadorController@index')->name('coordenador.home');
