@@ -251,7 +251,7 @@ border-radius: 70px;
   display:block; height: 100px;
   overflow: visible;
 }
-.card{
+/* .card{
   margin-top: 20px;
 
 }
@@ -259,7 +259,7 @@ border-radius: 70px;
   background-color: #1B2E4F;
   color: white;
   font-size: 20px;
-}
+} */
 
 .disabled-lmts{
   background-color: #67748B;

@@ -34,7 +34,7 @@
             <a href="{{route('preg.finalizados')}}">
             <div class="card-ppc-header"><h3>DISPONÍVEL PARA<br>DOWNLOAD</h3></div>
             <div class="card-ppc-body">
-              <img class="icone" src="{{asset('images/download-solid.svg')}}"  >
+              <img class="icone-processo" src="{{asset('images/download-solid.svg')}}"  >
               
             </div>
           </a>

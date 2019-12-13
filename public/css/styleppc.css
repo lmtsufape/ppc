@@ -54,6 +54,26 @@
 .icone-busca{
   width:30px;
 }
+
+/* Processos */
+.row-processo{
+  margin-top: 20px;
+  height: 30px;
+  
+  
+}
+
+
+.icone-processo{
+  width:25px;
+  margin-right: 20px;
+  transition: all 0.1s linear;
+}
+
+.icone-processo:hover{
+  width: 30px;
+  transition: all 0.1s linear;
+}
 /* PPC */
 .header-ppc{
   background-color: #1b2e4f;
@@ -73,6 +93,12 @@
   justify-content:left;
   align-items:center;
   text-align: center;
+}
+
+.info-processo{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #1b2e4f;
 }
 @media (max-width: 576px) {
   .btn-ppc-processo{

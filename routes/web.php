@@ -29,6 +29,9 @@ Route::post('/loginApi', 'HomeController@loginApi')->name('loginApi');
   Route::get('/preg/ppc/finalizados','PregController@finalizados')->name('preg.finalizados');
   Route::get('/preg/ppc/ajustes','PregController@ajustes')->name('preg.ajustes');
 
+  // ACOMPANHAR PROCESSO
+  Route::get('/acompanharProcesso','ProcessoController@index')->name('acompanharProcesso');
+
   // rotas para coordenador
   Route::get('/coordenador/home', 'CoordenadorController@index')->name('coordenador.home');
 
