@@ -12,6 +12,9 @@ class PregController extends Controller
 
   // lista os ppcs finalizados
   public function finalizados(){
-    return view('ppc.listarPpcsFinalizados');
+    return view('preg.listarPpcsFinalizados');
+  }
+  public function ajustes(){
+    return view('preg.listarPpcsAjustes');
   }
 }

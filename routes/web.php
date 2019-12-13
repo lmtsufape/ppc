@@ -27,6 +27,7 @@ Route::post('/loginApi', 'HomeController@loginApi')->name('loginApi');
   // rotas para preg
   Route::get('/preg/home', 'PregController@index')->name('preg.home');
   Route::get('/preg/ppc/finalizados','PregController@finalizados')->name('preg.finalizados');
+  Route::get('/preg/ppc/ajustes','PregController@ajustes')->name('preg.ajustes');
 
   // rotas para coordenador
   Route::get('/coordenador/home', 'CoordenadorController@index')->name('coordenador.home');

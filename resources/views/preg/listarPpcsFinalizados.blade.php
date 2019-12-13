@@ -6,16 +6,13 @@
     <div class="row justify-content-center header-ppc">
         <div class="col-sm-4 item-header-ppc">
             
-            <h3>PPCs Finalizados</h3>
+            <h3>PPC'S - Finalizados</h3>
             
         </div>
         <div class="col-sm-4"></div>
         <div class="col-sm-4 item-header-ppc" >
             <div class="input-group">
-                <input id="inputBusca" type="text"  class="form-control" placeholder="Buscar PPC">
-                {{-- <div class="busca" id="busca" style="background-color:aqua">
-                    <img class="icone-busca" src="{{asset('images/search-solid.svg')}}">
-                </div> --}}
+                <input id="inputBusca" type="text"  class="form-control" placeholder="Buscar Curso, Ano, N° do Processo ou Status">
             </div>
         
         </div>
@@ -24,22 +21,22 @@
 
 
     <div class="row justify-content-center">
-        <table id="tabela" class="table table-hover table-borderless bg-light">
+        <table id="tabela" class="table table-responsive-lg table-hover table-borderless bg-light">
             <thead>
-                <th scope="col">CURSO</th>
-                <th scope="col">ANO</th>
-                <th scope="col">N° DO PROCESSO</th>
-                <th scope="col">STATUS</th>
-                <th scope="col">DOWNLOAD</th>
+                <th>CURSO</th>
+                <th>ANO</th>
+                <th>N° DO PROCESSO</th>
+                <th>STATUS</th>
+                <th>DOWNLOAD</th>
             </thead>
 
-            <tbody id="tbody">
+            <tbody>
                 
                 <tr>
-                    <td>Ciências da Computação</td>
-                    <td>01/10/2019</td>
-                    <td>0001</td>
-                    <td>Finalizado</td>
+                    <td>Pedagogia</td>
+                    <td>2019</td>
+                    <td>201912132</td>
+                    <td>Disponível</td>
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
@@ -47,10 +44,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Agronomia</td>
-                    <td>01/11/2019</td>
-                    <td>0002</td>
-                    <td>Finalizado</td>
+                    <td>Ciências da Computação</td>
+                    <td>2019</td>
+                    <td>201912564</td>
+                    <td>Disponível</td>
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
@@ -58,10 +55,21 @@
                     </td>
                 </tr>    
                 <tr>
-                    <td>Zootecnia</td>
-                    <td>01/08/2019</td>
-                    <td>0003</td>
-                    <td>Em Espera</td>
+                    <td>Letras</td>
+                    <td>2019</td>
+                    <td>201912142</td>
+                    <td>Disponível</td>
+                    <td>
+                        <a href="">
+                            <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Engenharia de Pesca</td>
+                    <td>2019</td>
+                    <td>201912133</td>
+                    <td>Disponível</td>
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
