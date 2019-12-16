@@ -4,7 +4,75 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+
+            <div class="card" style="margin-top:60px">
+                <div class="card-header">Login</div>
+                <div class="card-body">
+                    <form method="POST" action="{{ route('loginApi') }}">
+                        @csrf
+
+                        <div class="row justify-content-center">
+                            <div class="col-sm-8">
+
+                                <div class="form-group">
+                                    <label for="email">{{__('Endereço de e-mail')}}</label>
+                                    <input class="form-control" type="email" for="email @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus >
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div><!--end row -->
+
+                        <div class="row justify-content-center">
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <label for="password">{{__('Senha')}}</label>
+                                    <input type="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-sm-8">
+
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Lembre-se de mim') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <button type="submit" class="btn btn-primary">
+                                {{ __('Login') }}
+                            </button>
+                        </div>
+
+                        <div class="row justify-content-center">
+
+                            @if (Route::has('password.request'))
+                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{ __('Esqueceu Sua Senha?') }}
+                            </a>
+                            @endif
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+            {{-- <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -66,7 +134,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

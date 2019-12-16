@@ -62,8 +62,6 @@
   
   
 }
-
-
 .icone-processo{
   width:25px;
   margin-right: 20px;
@@ -100,6 +98,9 @@
   margin-bottom: 20px;
   border: 2px solid #1b2e4f;
 }
+
+
+
 @media (max-width: 576px) {
   .btn-ppc-processo{
     margin-top: 20px;
