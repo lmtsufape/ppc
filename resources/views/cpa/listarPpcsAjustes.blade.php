@@ -33,7 +33,7 @@
             <tbody>
                 
                 <tr>
-                    <td><a href="{{route('preg.acompanharProcesso')}}">Pedagogia</a></td>
+                    <td><a href="{{route('cpa.acompanharProcesso')}}">Pedagogia</a></td>
                     <td>2019</td>
                     <td>10/10/2019</td>
                     <td>PREG - CPA</td>
@@ -44,7 +44,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="{{route('preg.acompanharProcesso')}}">Ciências da Computação</a></td>
+                    <td><a href="{{route('cpa.acompanharProcesso')}}">Ciências da Computação</a></td>
                     <td>2019</td>
                     <td>19/10/2019</td>
                     <td>NDE</td>
@@ -55,7 +55,7 @@
                     </td>
                 </tr>    
                 <tr>
-                    <td><a href="{{route('preg.acompanharProcesso')}}">Letras</a></td>
+                    <td><a href="{{route('cpa.acompanharProcesso')}}">Letras</a></td>
                     <td>2019</td>
                     <td>16/10/2019</td>
                     <td>PREG - CGE</td>
@@ -67,7 +67,7 @@
                 </tr>
 
                 <tr>
-                    <td><a href="{{route('preg.acompanharProcesso')}}">Engenharia de Alimentos</a></td>
+                    <td><a href="{{route('cpa.acompanharProcesso')}}">Engenharia de Alimentos</a></td>
                     <td>2019</td>
                     <td>21/10/2019</td>
                     <td>CTA</td>

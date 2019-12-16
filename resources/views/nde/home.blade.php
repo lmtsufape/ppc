@@ -20,9 +20,9 @@
       <div class="col-sm-4">
           <div class="card-ppc" >
           <a href="{{route('preg.ajustes')}}">
-            <div class="card-ppc-header" ><h3>DISPONÍVEL PARA<br>AJUSTES</h3></div>
+            <div class="card-ppc-header" ><h3>NOVO<br>PROCESSO</h3></div>
             <div class="card-ppc-body">
-              <img class="icone" src="{{asset('images/edit-solid.svg')}}" >
+              <img class="icone" src="{{asset('images/file-regular.svg')}}" style="height:80px" >
               
             </div>
             </a>
@@ -32,9 +32,9 @@
       <div class="col-sm-4">
           <div class="card-ppc" >
             <a href="{{route('preg.finalizados')}}">
-            <div class="card-ppc-header"><h3>DISPONÍVEL PARA<br>DOWNLOAD</h3></div>
+            <div class="card-ppc-header"><h3>RETOMAR<br>PROCESSO</h3></div>
             <div class="card-ppc-body">
-              <img class="icone" src="{{asset('images/download-solid.svg')}}"  >
+              <img class="icone" src="{{asset('images/folder-regular.svg')}}"  >
               
             </div>
           </a>
