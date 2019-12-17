@@ -28,9 +28,19 @@ Route::post('/loginApi', 'HomeController@loginApi')->name('loginApi');
   Route::get('/preg/home', 'PregController@index')->name('preg.home');
   Route::get('/preg/ppc/finalizados','PregController@finalizados')->name('preg.finalizados');
   Route::get('/preg/ppc/ajustes','PregController@ajustes')->name('preg.ajustes');
+  Route::get('/preg/acompanharProcesso','PregController@acompanharProcesso')->name('preg.acompanharProcesso');
 
-  // ACOMPANHAR PROCESSO
-  Route::get('/acompanharProcesso','ProcessoController@index')->name('acompanharProcesso');
+  // rotas para cpa
+  Route::get('/cpa/home', 'CpaController@index')->name('cpa.home');
+  Route::get('/cpa/ppc/finalizados','CpaController@finalizados')->name('cpa.finalizados');
+  Route::get('/cpa/ppc/ajustes','CpaController@ajustes')->name('cpa.ajustes');
+  Route::get('/cpa/acompanharProcesso','CpaController@acompanharProcesso')->name('cpa.acompanharProcesso');
+
+
+  // rotas para nde
+  Route::get('/nde/home','NdeController@index')->name('nde.home');
+  
+
 
   // rotas para coordenador
   Route::get('/coordenador/home', 'CoordenadorController@index')->name('coordenador.home');

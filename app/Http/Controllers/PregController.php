@@ -17,4 +17,7 @@ class PregController extends Controller
   public function ajustes(){
     return view('preg.listarPpcsAjustes');
   }
+  public function acompanharProcesso(){
+    return view('preg.acompanharProcesso');
+  }
 }
