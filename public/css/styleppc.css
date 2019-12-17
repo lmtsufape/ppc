@@ -31,15 +31,75 @@
 
   background-color: #1b2e4f;
   color: white;
+  transition: all 0.1s linear;
 }
-
+#white{
+  color: white;
+}
+#white:hover{
+  color: #ddd;
+}
 .btn-ppc-processo:hover{
   margin-top: 20px;
   border-radius: 0;
-  padding: 1% 5% 1%;
+  padding: 1% 6% 1%;
   background-color: #1b2e4f;
-  color: gray;
+  color: #ddd;
+  transition: all 0.1s linear;
 }
+
+.icone{
+  width:100px;
+}
+.icone-busca{
+  width:30px;
+}
+
+/* Processos */
+.row-processo{
+  margin-top: 20px;
+  height: 30px;
+  
+  
+}
+.icone-processo{
+  width:25px;
+  margin-right: 20px;
+  transition: all 0.1s linear;
+}
+
+.icone-processo:hover{
+  width: 30px;
+  transition: all 0.1s linear;
+}
+/* PPC */
+.header-ppc{
+  background-color: #1b2e4f;
+  color: white;
+  margin-top: 20px;
+  /* padding-top: 1%; */
+  
+  
+
+ 
+}
+.item-header-ppc{
+  height: 100%;
+
+  padding:1%;
+  display:flex;
+  justify-content:left;
+  align-items:center;
+  text-align: center;
+}
+
+.info-processo{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #1b2e4f;
+}
+
+
 
 @media (max-width: 576px) {
   .btn-ppc-processo{
@@ -57,6 +117,16 @@
     border-radius: 0;
     padding: 3% 8% 3%;
     background-color: #1b2e4f;
-    color: gray;
+    color: #ddd;
+  }
+
+  .item-header-ppc{
+    height: 100%;
+  
+    padding:1%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
   }
 }
