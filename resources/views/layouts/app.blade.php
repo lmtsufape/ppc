@@ -25,6 +25,7 @@
     <link href="{{ asset('css/lmts-app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/field-animation.css') }}" rel="stylesheet">
     <link href="{{ asset('css/stylelmts.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styleppc.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>

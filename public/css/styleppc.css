@@ -1,0 +1,62 @@
+.card-ppc{
+  height: 300px;
+  width: 300px;
+  margin: 20px 20px 20px 0;
+}
+.card-ppc-header{
+  background-color: #1b2e4f;
+  color: white;
+  height: 30%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+}
+
+.card-ppc-body{
+  background-color: #eee;
+  height: 70%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+}
+.btn-ppc-processo{
+
+  height: 50px;
+  margin-top: 20px;
+
+  border-radius: 0;
+  padding: 1% 5% 1%;
+
+  background-color: #1b2e4f;
+  color: white;
+}
+
+.btn-ppc-processo:hover{
+  margin-top: 20px;
+  border-radius: 0;
+  padding: 1% 5% 1%;
+  background-color: #1b2e4f;
+  color: gray;
+}
+
+@media (max-width: 576px) {
+  .btn-ppc-processo{
+    margin-top: 20px;
+    border-radius: 0;
+    padding: 3% 8% 3%;
+
+    background-color: #1b2e4f;
+    color: white;
+
+  }
+
+  .btn-ppc-processo:hover{
+    margin-top: 20px;
+    border-radius: 0;
+    padding: 3% 8% 3%;
+    background-color: #1b2e4f;
+    color: gray;
+  }
+}

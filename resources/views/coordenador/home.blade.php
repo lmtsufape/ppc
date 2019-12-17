@@ -4,50 +4,49 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">PROCESSOS</div>
 
-                <div class="card-body">
-                  <div class="card-deck d-flex justify-content-center">
-                    <div class="conteudo-central d-flex justify-content-center">
+  <div class="row justify-content-center">
+    <div class="col-sm-12">
 
-                      <a href="{{ route('ppc.cadastrar') }}" style="text-decoration:none; color: inherit;">
-                        <div class="card cartao text-center " style="border-radius: 30px">
-                          <div class="card-body d-flex justify-content-center">
-                            <h2>
-                              CADASTRAR PPC
-                              <br>
-                              <img src="{{asset('images/new_file.png')}}" >
-                            </h2>
-                          </div>
-                        </div>
-                      </a>
+      <div class="titulo-tabela-lmts">
+        <h2>PROCESSOS</h2>
+      </div>
 
-                      <a href="#" style="text-decoration:none; color: inherit;">
-                        <div class="card cartao text-center " style="border-radius: 30px">
-                          <div class="card-body d-flex justify-content-center">
-                            <h2>
-                              RETOMAR PPC
-                              <br>
-                              <img src="{{asset('images/folder.png')}}" >
-                            </h2>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card-footer">
-                  <a class="btn btn-primary" href="#">
-                    PROCESSOS ABERTOS
-                  </a>
-                </div>
-
-            </div>
-        </div>
     </div>
+
+  </div>
+
+  <div class="row justify-content-center">
+      <div class="col-sm-4">
+          <div class="card-ppc" >
+            <a href="{{ route('ppc.cadastrar') }}">
+            <div class="card-ppc-header" ><h3>NOVO<br>PROCESSO</h3></div>
+            <div class="card-ppc-body">
+              <img src="{{asset('images/new_file.png')}}" >
+            </div>
+            </a>
+          </div><!-- end card-->
+      </div>
+
+      <div class="col-sm-4">
+          <div class="card-ppc" >
+            <a href="#">
+            <div class="card-ppc-header"><h4>RETOMAR<br>PROCESSO</h4></div>
+            <div class="card-ppc-body">
+              <img src="{{asset('images/folder.png')}}" >
+            </div>
+          </a>
+          </div><!-- end card-->
+      </div>
+
+  </div>
+
+  <div class="row justify-content-center">
+    <a class="btn btn-ppc-processo" href="#">
+      PROCESSOS ABERTOS
+    </a>
+
+  </div>
+
 </div>
 @endsection
