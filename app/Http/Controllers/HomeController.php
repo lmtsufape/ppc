@@ -27,6 +27,18 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if(session('tipoNome') == 'PREG'){
+          return redirect()->route('preg.home');
+        }
+        if(session('tipoNome') == 'CAPR'){
+          return redirect()->route('cpa.home');
+        }
+        if(session('tipoNome') == 'CPE'){
+          return redirect()->route('nde.home');
+        }
+        if(session('tipoNome') == 'coordenador'){
+          return redirect()->route('coordenador.home');
+        }
         return view('home');
     }
 

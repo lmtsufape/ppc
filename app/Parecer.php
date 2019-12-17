@@ -6,7 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Parecer extends Model
 {
+  protected $fillable = [
+                          'status',
+                          'anexo',
+                          'arquivoId'
+                        ];
+
+
   public function arquivo(){
-    return $this->belongsTo(Arquivo::class, 'arquivoId');
+    return $this->belongsTo('App\Arquivo', 'arquivoId');
   }
 }

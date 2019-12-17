@@ -16,7 +16,7 @@ class CreateParecersTable extends Migration
         Schema::create('parecers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('anexo');
-            $table->boolean('aceito');
+            $table->boolean('status');
             $table->integer('arquivoId');
             $table->timestamps();
         });

@@ -6,8 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ppc extends Model
 {
-  public function arquivos()
+  protected $fillable = [
+                          'cursoId',
+                          'status',
+                          'ano',
+                        ];
+
+
+  public function arquivo()
   {
-      return $this->hasMany(Arquivo::class);
+      return $this->hasMany('App\Arquivo');
   }
 }

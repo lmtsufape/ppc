@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/loginApi', 'HomeController@loginApi')->name('loginApi');
 
 
-// Route::group(['middleware' => ['lmts']], function(){
+ Route::group(['middleware' => ['lmts']], function(){
   // rotas para preg
   Route::get('/preg/home', 'PregController@index')->name('preg.home');
   Route::get('/preg/ppc/finalizados','PregController@finalizados')->name('preg.finalizados');
@@ -36,11 +36,8 @@ Route::post('/loginApi', 'HomeController@loginApi')->name('loginApi');
   Route::get('/cpa/ppc/ajustes','CpaController@ajustes')->name('cpa.ajustes');
   Route::get('/cpa/acompanharProcesso','CpaController@acompanharProcesso')->name('cpa.acompanharProcesso');
 
-
   // rotas para nde
   Route::get('/nde/home','NdeController@index')->name('nde.home');
-  
-
 
   // rotas para coordenador
   Route::get('/coordenador/home', 'CoordenadorController@index')->name('coordenador.home');
@@ -49,4 +46,4 @@ Route::post('/loginApi', 'HomeController@loginApi')->name('loginApi');
   Route::get('/coordenador/ppc/cadastrar', 'PpcController@cadastrar')->name('ppc.cadastrar');
   Route::post('/coordenador/ppc/criar', 'PpcController@criar')->name('ppc.criar');
 
-// });
+});

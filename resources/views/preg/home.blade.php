@@ -23,7 +23,7 @@
             <div class="card-ppc-header" ><h3>DISPONÍVEL PARA<br>AJUSTES</h3></div>
             <div class="card-ppc-body">
               <img class="icone" src="{{asset('images/edit-solid.svg')}}" >
-              
+
             </div>
             </a>
           </div><!-- end card-->
@@ -35,7 +35,7 @@
             <div class="card-ppc-header"><h3>DISPONÍVEL PARA<br>DOWNLOAD</h3></div>
             <div class="card-ppc-body">
               <img class="icone" src="{{asset('images/download-solid.svg')}}"  >
-              
+
             </div>
           </a>
           </div><!-- end card-->
@@ -43,7 +43,7 @@
 
   </div>
 
-  
+
 
 </div>
 @endsection
