@@ -1009,16 +1009,16 @@
         },
         {
             "name": "lmts/api",
-            "version": "v1.0.10",
+            "version": "v1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lmts-ufape/package-api.git",
-                "reference": "db1040188d59e2a8110780da59568a5ee6c4788b"
+                "reference": "d914641428a6cd0cea39491b71c4e1d2a51afb7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lmts-ufape/package-api/zipball/db1040188d59e2a8110780da59568a5ee6c4788b",
-                "reference": "db1040188d59e2a8110780da59568a5ee6c4788b",
+                "url": "https://api.github.com/repos/lmts-ufape/package-api/zipball/d914641428a6cd0cea39491b71c4e1d2a51afb7c",
+                "reference": "d914641428a6cd0cea39491b71c4e1d2a51afb7c",
                 "shasum": ""
             },
             "require": {
@@ -1045,7 +1045,7 @@
                 }
             ],
             "description": "Interface para o uso da API do LMTS.",
-            "time": "2019-12-06T20:39:29+00:00"
+            "time": "2019-12-19T18:53:14+00:00"
         },
         {
             "name": "monolog/monolog",

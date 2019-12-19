@@ -39,7 +39,6 @@
                     </div>
                   </div>
                   <form method="POST" action="{{ route("ppc.criar") }}" enctype="multipart/form-data">
-
                     <div class="row">
                       {{ csrf_field() }}
                       <div class="form-group {{ $errors->has('arquivo') ? ' has-error' : '' }}">
@@ -49,17 +48,19 @@
                         <div class="col-sm-12">
                           <input id="arquivo" type="file" class="" name="arquivo" data-placeholder="Nenhum arquivo" data-text="Selecionar" data-btnClass="btn btn-primary-ppc">
 
-                          @if ($errors->has('arquivo'))
-                            <span class="help-block">
-                              <strong>{{ $errors->first('arquivo') }}</strong>
-                            </span>
-                          @endif
+                          @error('arquivo')
+                          <span class="invalid-feedback" role="alert" style="overflow: visible; display:block">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                          @enderror
                         </div>
                       </div>
                     </div>
 
                     <div class="row justify-content-center">
-                      <button type="submit" class="btn btn-ppc-processo">
+
+                      <button onclick="event.preventDefault();confirmar();" id="buttonFinalizar" class="btn btn-ppc-processo"">
+
                         FINALIZAR
                       </button>
                     </div>
@@ -74,5 +75,15 @@
 
 
 <script src="{{ asset('js/bootstrap-filestyle.min.js')}}"> </script>
+
+
+<script type="text/javascript" >
+function confirmar(){
+if(confirm("Tem certeza que deseja finalizar?") == true) {
+  document.getElementById("formCadastro").submit();
+}
+}
+
+</script>
 
 @endsection

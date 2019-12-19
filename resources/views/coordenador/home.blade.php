@@ -42,7 +42,7 @@
   </div>
 
   <div class="row justify-content-center">
-    <a class="btn btn-ppc-processo" href="#">
+    <a class="btn btn-ppc-processo" href="{{ route('coordenador.verProcessos') }}">
       PROCESSOS ABERTOS
     </a>
 
