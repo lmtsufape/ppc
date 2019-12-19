@@ -39,6 +39,7 @@ Route::post('/loginApi', 'HomeController@loginApi')->name('loginApi');
   // rotas para nde
   Route::get('/nde/home','NdeController@index')->name('nde.home');
   Route::get('/nde/reabrirProcesso','NdeController@indexReabrirProcesso')->name('nde.reabrirProcesso');
+  Route::get('/nde/solicitarAjustes','NdeController@solicitarAjustes')->name('nde.solicitarAjustes');
 
   // rotas para coordenador
   Route::get('/coordenador/home', 'CoordenadorController@index')->name('coordenador.home');

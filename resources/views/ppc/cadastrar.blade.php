@@ -47,7 +47,7 @@
                           <label for="arquivo" class="control-label">Anexo</label>
                         </div>
                         <div class="col-sm-12">
-                          <input id="arquivo" type="file" class="" name="arquivo" data-placeholder="Nenhum arquivo selecionado" data-text="Selecionar" data-btnClass="btn btn-primary-ppc">
+                          <input id="arquivo" type="file" class="" name="arquivo" data-placeholder="Nenhum arquivo" data-text="Selecionar" data-btnClass="btn btn-primary-ppc">
 
                           @if ($errors->has('arquivo'))
                             <span class="help-block">

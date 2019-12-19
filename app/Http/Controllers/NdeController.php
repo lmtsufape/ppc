@@ -22,5 +22,9 @@ class NdeController extends Controller
       return view('nde.reabrirProcesso');
     }
 
+    public function solicitarAjustes(){
+      return view('nde.solicitarAjustes');
+    }
+
 
 }
