@@ -16,7 +16,7 @@ class CreatePpcsTable extends Migration
         Schema::create('ppcs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('status');
-            $table->year('ano');
+            $table->year('ano')->nullable();
             $table->integer('cursoId');
             $table->timestamps();
         });

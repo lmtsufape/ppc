@@ -18,6 +18,7 @@ class CreateParecersTable extends Migration
             $table->string('anexo');
             $table->boolean('status');
             $table->integer('arquivoId');
+            $table->string('tipo');
             $table->timestamps();
         });
     }

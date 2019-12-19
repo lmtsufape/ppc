@@ -16,7 +16,7 @@
                   <strong>CURSO:</strong> Ciência da Computação
 
                   <div class="col-md-8 col-md-offset-2">
-                    <form method="POST" action="{{ route("ppc.criar") }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route("ppc.criar") }}" enctype="multipart/form-data" id="formCadastro">
 
                       {{ csrf_field() }}
 
@@ -26,15 +26,15 @@
                         <div class="col-md-12">
                           <input id="arquivo" type="file" class="filestyle" name="arquivo" data-placeholder="Nenhum arquivo selecionado" data-text="Selecionar" data-btnClass="btn btn-primary">
 
-                          @if ($errors->has('arquivo'))
-                            <span class="help-block">
-                              <strong>{{ $errors->first('arquivo') }}</strong>
-                            </span>
-                          @endif
+                          @error('arquivo')
+                          <span class="invalid-feedback" role="alert" style="overflow: visible; display:block">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                          @enderror
                         </div>
                       </div>
 
-                      <button type="submit" class="btn btn-primary">
+                      <button onclick="event.preventDefault();confirmar();" id="buttonFinalizar" class="btn btn-primary">
                         FINALIZAR
                       </button>
                     </form>
@@ -48,5 +48,15 @@
 
 
 <script src="{{ asset('js/bootstrap-filestyle.min.js')}}"> </script>
+
+
+<script type="text/javascript" >
+function confirmar(){
+if(confirm("Tem certeza que deseja finalizar?") == true) {
+  document.getElementById("formCadastro").submit();
+}
+}
+
+</script>
 
 @endsection

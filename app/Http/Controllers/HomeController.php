@@ -52,4 +52,16 @@ class HomeController extends Controller
                                          ->withErrors(['email' => 'E-mail ou Senha incorreta.']);
       }
     }
+
+    public function irParaLogin(Request $request){
+  		if($this->api->check()){
+  			return redirect()->route('home');
+  		}
+
+  		return view('auth.login');
+  	}
+
+    public function downloadArquivo(Request $request){
+      return response()->download(storage_path('app/'.$request->file));
+  	}
 }

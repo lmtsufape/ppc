@@ -9,7 +9,8 @@ class Parecer extends Model
   protected $fillable = [
                           'status',
                           'anexo',
-                          'arquivoId'
+                          'arquivoId',
+                          'tipo'
                         ];
 
 

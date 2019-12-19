@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use Lmts\src\controller\LmtsApi;
 use App\Ppc;
+use App\Arquivo;
 
 class PpcController extends Controller
 {
@@ -26,17 +27,26 @@ class PpcController extends Controller
   public function criar(Request $request){
     $validatedData = $request->validate([
       'arquivo' => ['file', 'mimes:pdf'],
-      'ano'     => ['required', 'string'],
+      // 'ano'     => ['required', 'string'],
+    ]);
+    $ppc = Ppc::create([
+      'status'  => 'processando',
+      'cursoId' => session('unidadeOrgId'),
     ]);
     $file = $request->arquivo;
-    $path = 'editais/';
-    $nome = $request->nome . ".pdf";
+    $path = session('unidadeOrgId') . '/' . $ppc->id . '/';
+    $nome = "1.pdf";
     Storage::putFileAs($path, $file, $nome);
-    Ppc::create([
-      'arquivo' => $path . $nome,
-      'ano'     => $request->ano,
-      'status'  => 'processando',
+
+    $arquivo = Arquivo::create([
+      'status' => 'processando',
+      'anexo'  => $path . $nome,
+      'ppcId'  => $ppc->id,
+
     ]);
+
+    return redirect()->route('home');
+
   }
 
 }

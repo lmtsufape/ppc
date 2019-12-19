@@ -34,7 +34,7 @@
 
     {{-- Biblioteca para buscar dados em tabelas --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
-    
+
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
 </head>
 <body>
@@ -79,7 +79,7 @@
 
 <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg" style="background-color: #1B2E4F; border-color: #d3e0e9; box-shadow: 0 0 6px rgba(0,0,0,0.5);" role="navigation">
-      <a class="navbar-brand" href="{{ route('login') }}" style="color: white; font-weight: bold;">
+      <a class="navbar-brand" href="{{ route('home') }}" style="color: white; font-weight: bold;">
         <img src="{{asset('images/home.png')}}" height="20" class="d-inline-block align-top" alt="">
       @auth
       @endauth
@@ -90,12 +90,12 @@
         </div>
         <div class="nav navbar-nav navbar-right" >
           <ul class="nav navbar-nav">
-              @if(Auth::check())
+              @if(session('email'))
               <li>
               <a class="nav-link"  href="{{ route('login') }}"
                  onclick="event.preventDefault();
                                document.getElementById('usuario-form').submit();"style="color:white;">
-                 Bem vindo, {{Auth::user()->name}}
+                 Bem vindo, {{session('email')}}
               </a>
               <form id="usuario-form" action="{{ route('login') }}" method="GET" style="display: none;">
                   @csrf
@@ -104,7 +104,7 @@
               @endif
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              @if(Auth::check())
+              @if(session('email'))
                 <li> <!--  logout   -->
                     <a class="nav-link"  href="{{ route('logout') }}"
                        onclick="event.preventDefault();
@@ -123,7 +123,7 @@
 <!-- NAVBAR -->
 
 
-    
+
     <div id="page-container" style="background-color:#FFFFFF">
       <div id="content-wrap">
         @yield('content')
