@@ -1,16 +1,63 @@
 @extends('layouts.app')
 
 @section('content')
+<style media="screen">
+  body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to top, #1b2e4f, #152745);
+  }
+  .navbar{
+    display: none;
+  }
+  .container{
+    height: 73vh;
+    width: 100vw;
+  }
+  .card{
+    margin-top: 35%;
+    box-shadow: 1px 1px 20px black;
+
+  }
+  .titleLogin{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+
+  }
+
+  @media screen and (max-width: 576px){
+    .container{
+      margin-bottom: 80px;
+    }
+    .card{
+      margin-top: 30%;
+      margin-bottom: 80px;
+    }
+  }
+</style>
+
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-5">
 
-            <div class="card" style="margin-top:60px">
-                <div class="card-header">Login</div>
+            <div class="card">
+                <!-- <div class="card-header">Login</div> -->
                 <div class="card-body">
                     <form method="POST" action="{{ route('loginApi') }}">
                         @csrf
 
+                        <div class="row justify-content-center">
+                          <div class="titleLogin">
+                            <h2>Login</h2>
+
+                          </div>
+
+                        </div>
                         <div class="row justify-content-center">
                             <div class="col-sm-8">
 
@@ -109,7 +156,7 @@
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
+                                <div class="form-group form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">

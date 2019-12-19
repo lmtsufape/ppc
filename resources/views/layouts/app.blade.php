@@ -124,7 +124,9 @@
 
 
 
-    <div id="page-container" style="background-color:#FFFFFF">
+
+    <div id="page-container">
+
       <div id="content-wrap">
         @yield('content')
         <br>

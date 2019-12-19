@@ -38,7 +38,9 @@ Route::get( '/login',    'HomeController@irParaLogin')->name('login');
   Route::get('/cpa/acompanharProcesso',             'CpaController@acompanharProcesso'    )->name('cpa.acompanharProcesso');
 
   // rotas para nde
+
   Route::get('/nde/home',                           'NdeController@index'                 )->name('nde.home');
+
 
   // rotas para coordenador
   Route::get('/coordenador/home',                   'CoordenadorController@index'         )->name('coordenador.home');
