@@ -21,7 +21,13 @@ class PpcController extends Controller
 
 
   public function cadastrar(){
-      return view('ppc.cadastrar');
+    $curso = $this->api->getPais(6, session('unidadeOrgId'));
+    $nomeCurso = $curso[0]['nome'];
+    $nomeUnidade = $curso[2]['nome'];
+    return view('ppc.cadastrar',[
+                                  'nomeCurso' => $nomeCurso,
+                                  'nomeUnidade' => $nomeUnidade,
+                                ]);
   }
 
   public function criar(Request $request){

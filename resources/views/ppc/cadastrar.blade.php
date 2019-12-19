@@ -27,7 +27,7 @@
                       <label for="">Unidade Acadêmica</label>
                     </div>
                     <div class="col-sm-12">
-                      <h3>Garanhuns</h3>
+                      <h3>{{$nomeUnidade}}</h3>
                     </div>
                   </div>
                   <div class="row">
@@ -35,7 +35,7 @@
                       Curso
                     </div>
                     <div class="col-sm-12">
-                        <h3>Ciências da Computação</h3>
+                        <h3>{{$nomeCurso}}</h3>
                     </div>
                   </div>
                   <form method="POST" action="{{ route("ppc.criar") }}" enctype="multipart/form-data">
