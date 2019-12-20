@@ -52,7 +52,7 @@
                     </a>
                   </td>
                   <td>
-                    <a href="{{ route('download', ['file' => '11/2/1.pdf'])}}" target="_new">
+                    <a href="{{ route('download', ['file' => $processo->arquivo[0]->anexo])}}" target="_new">
                       <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
                     </a>
                   </td>

@@ -15,6 +15,6 @@ class Ppc extends Model
 
   public function arquivo()
   {
-      return $this->hasMany('App\Arquivo');
+      return $this->hasMany('App\Arquivo', 'ppcId');
   }
 }

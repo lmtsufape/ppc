@@ -48,31 +48,68 @@
                                     ?>
 
                                     {{ $date }}
-                                    <h3>Data: {{$date}} (<a href="#">Baixar Versão</a>)</h3>
+                                    <h3>Data: {{$date}} (<a href="{{ route('download', ['file' => $arquivo->anexo])}}">Baixar Versão</a>)</h3>
                                 </div>
                         </div><!-- end card-header-->
                         <div id="collapseProcesso{{$i}}" class="collapse" aria-labelledby="heading{{$i}}" data-parent="#accordion">
                             <div class="card-body">
                                 <form action="">
                                     <div class="form-check">
+                                      @if($arquivo->parecer)
+                                        @foreach($arquivo->parecer as $parecer)
+                                          @if($parecer->tipo == 'CPA')
+                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                <h4>Parecer CPA (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                                </h4>
+                                            </label>
+                                          @endif
+                                        @endforeach
+                                      @else
                                         <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CPA (<a href="#">Visualizar</a>)
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar Arquivo</button>
+                                            <h4>Parecer CPA (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
                                             </h4>
                                         </label>
+                                      @endif
                                     </div>
                                     <div class="form-check">
+                                      @if($arquivo->parecer)
+                                        @foreach($arquivo->parecer as $parecer)
+                                          @if($parecer->tipo == 'CPE')
+                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                <h4>Parecer CPE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                                </h4>
+                                            </label>
+                                          @endif
+                                        @endforeach
+                                      @else
                                         <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CPE (<a href="#">Visualizar</a>)</h4>
+                                            <h4>Parecer CPE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                            </h4>
                                         </label>
+                                      @endif
                                     </div>
                                     <div class="form-check">
+                                      @if($arquivo->parecer)
+                                        @foreach($arquivo->parecer as $parecer)
+                                          @if($parecer->tipo == 'CGE')
+                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                <h4>Parecer CGE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                                </h4>
+                                            </label>
+                                          @endif
+                                        @endforeach
+                                      @else
                                         <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CGE (<a href="#">Visualizar</a>)</h4>
+                                            <h4>Parecer CGE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                            </h4>
                                         </label>
+                                      @endif
                                     </div>
                                 </form>
                             </div>

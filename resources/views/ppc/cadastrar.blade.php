@@ -38,7 +38,7 @@
                         <h3>{{$nomeCurso}}</h3>
                     </div>
                   </div>
-                  <form method="POST" action="{{ route("ppc.criar") }}" enctype="multipart/form-data">
+                  <form method="POST" action="{{ route("ppc.criar") }}" enctype="multipart/form-data" id="formCadastro">
                     <div class="row">
                       {{ csrf_field() }}
                       <div class="form-group {{ $errors->has('arquivo') ? ' has-error' : '' }}">
@@ -59,7 +59,7 @@
 
                     <div class="row justify-content-center">
 
-                      <button onclick="event.preventDefault();confirmar();" id="buttonFinalizar" class="btn btn-ppc-processo"">
+                      <button onclick="event.preventDefault();confirmar();" id="buttonFinalizar" class="btn btn-ppc-processo">
 
                         FINALIZAR
                       </button>

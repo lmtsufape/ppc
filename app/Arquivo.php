@@ -19,7 +19,7 @@ class Arquivo extends Model
 
   public function parecer()
   {
-      return $this->hasMany('App\Parecer');
+      return $this->hasMany('App\Parecer', 'arquivoId');
   }
 
 }
