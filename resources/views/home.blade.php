@@ -15,7 +15,7 @@
                     @endif
 
                     Você está logado!
-
+                    {{session('tipoNome')}}
 
                 </div>
 

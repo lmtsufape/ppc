@@ -45,14 +45,16 @@
                         <div class="col-sm-12">
                           <label for="arquivo" class="control-label">Anexo</label>
                         </div>
-                        <div class="col-sm-12">
-                          <input id="arquivo" type="file" class="" name="arquivo" data-placeholder="Nenhum arquivo" data-text="Selecionar" data-btnClass="btn btn-primary-ppc">
+                        <div class="col-sm-12" style="width: 100%">
+                          <div class="custom-file">
+                            <input type="file" class="filestyle" data-placeholder="Nenhum arquivo" data-text="Selecionar" data-btnClass="btn-primary-lmts" name="arquivo">
+                            @error('arquivo')
+                            <span class="invalid-feedback" role="alert" style="overflow: visible; display:block">
+                              <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
 
-                          @error('arquivo')
-                          <span class="invalid-feedback" role="alert" style="overflow: visible; display:block">
-                            <strong>{{ $message }}</strong>
-                          </span>
-                          @enderror
+                          </div>
                         </div>
                       </div>
                     </div>

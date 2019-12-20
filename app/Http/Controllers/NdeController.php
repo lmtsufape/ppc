@@ -15,16 +15,16 @@ class NdeController extends Controller
     }
 
     //
-    public function index(){
-        return view('nde.home');
-    }
-    public function indexReabrirProcesso(){
-      return view('nde.reabrirProcesso');
-    }
-
-    public function solicitarAjustes(){
-      return view('nde.solicitarAjustes');
-    }
+    // public function index(){
+    //     return view('nde.home');
+    // }
+    // public function indexReabrirProcesso(){
+    //   return view('nde.reabrirProcesso');
+    // }
+    //
+    // public function solicitarAjustes(){
+    //   return view('nde.solicitarAjustes');
+    // }
 
 
 }

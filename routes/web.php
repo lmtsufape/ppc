@@ -37,9 +37,14 @@ Route::get( '/login',    'HomeController@irParaLogin')->name('login');
   Route::get('/cpa/ppc/ajustes',                    'CpaController@ajustes'               )->name('cpa.ajustes');
   Route::get('/cpa/acompanharProcesso',             'CpaController@acompanharProcesso'    )->name('cpa.acompanharProcesso');
 
-  // rotas para nde
+  // rotas para cge
+  Route::get('/dep/home',                           'DepPregController@index'                 )->name('dep.home');
+  Route::get('/dep/ppc/finalizados',                'DepPregController@finalizados'           )->name('dep.finalizados');
+  Route::get('/dep/ppc/ajustes',                    'DepPregController@ajustes'               )->name('dep.ajustes');
+  Route::get('/dep/acompanharProcesso',             'DepPregController@acompanharProcesso'    )->name('dep.acompanharProcesso');
 
-  Route::get('/nde/home',                           'NdeController@index'                 )->name('nde.home');
+  // rotas para nde
+  // Route::get('/nde/home',                           'NdeController@index'                 )->name('nde.home');
 
 
   // rotas para coordenador

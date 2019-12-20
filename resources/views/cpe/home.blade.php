@@ -19,10 +19,11 @@
   <div class="row justify-content-center">
       <div class="col-sm-4">
           <div class="card-ppc" >
-            <a href="{{ route('ppc.cadastrar') }}">
-            <div class="card-ppc-header" ><h3>NOVO<br>PROCESSO</h3></div>
+          <a href="{{route('cpa.ajustes')}}">
+            <div class="card-ppc-header" ><h3>DISPONÍVEL PARA<br>AJUSTES</h3></div>
             <div class="card-ppc-body">
-              <img src="{{asset('images/new_file.png')}}" >
+              <img class="icone" src="{{asset('images/edit-solid.svg')}}" >
+              
             </div>
             </a>
           </div><!-- end card-->
@@ -30,10 +31,11 @@
 
       <div class="col-sm-4">
           <div class="card-ppc" >
-            <!-- <a href="{{route('nde.reabrirProcesso')}}"> -->
-            <div class="card-ppc-header"><h4>RETOMAR<br>PROCESSO</h4></div>
+            <a href="{{route('cpa.finalizados')}}">
+            <div class="card-ppc-header"><h3>DISPONÍVEL PARA<br>DOWNLOAD</h3></div>
             <div class="card-ppc-body">
-              <img src="{{asset('images/folder.png')}}" >
+              <img class="icone" src="{{asset('images/download-solid.svg')}}"  >
+              
             </div>
           </a>
           </div><!-- end card-->
@@ -41,12 +43,7 @@
 
   </div>
 
-  <div class="row justify-content-center">
-    <a class="btn btn-ppc-processo" href="#">
-      PROCESSOS ABERTOS
-    </a>
-
-  </div>
+  
 
 </div>
 @endsection
