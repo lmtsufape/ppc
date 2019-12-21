@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
     {{-- Título do processo --}}
         <div class="titulo-tabela-lmts">
-            <h2>ACOMPANHAR PROCESSOS</h2>
+            <h2>ACOMPANHAR PPC</h2>
         </div>
     </div>
     {{-- Informações do processo --}}
@@ -40,7 +40,7 @@
                                 <div class="col-sm-12">
                                     <a data-toggle="collapse" href="#collapseProcesso{{$i}}" 
                                     role="button" aria-expanded="false" aria-controls="collapseProcesso{{$i}}">
-                                        <img style="float:left" class="icone-processo" src="{{asset('images/info-circle-solid.svg')}}" alt="">
+                                        <img id="img" style="float:left" class="icone-processo" src="{{asset('images/info-circle-solid.svg')}}" alt="">
                                     </a>
                                     <h3>Data: 13/10/2019 (<a href="#">Baixar Versão</a>)</h3>
                                 </div>
@@ -119,6 +119,19 @@
     </div>
 </div>
 
+<script>
+    $(document).ready(function(){
+        $('#img').click(function(){
+            if($(this).attr("src") == "{{asset('images/plus-solid.svg')}}"){
+                
+                $(this).attr("src", "{{asset('images/minus-solid.svg')}}" );
+            }else{
+                $(this).attr("src", "{{asset('images/plus-solid.svg')}}" );
+            }
+        });
 
+    });
+</script>
+    
 
 @endsection

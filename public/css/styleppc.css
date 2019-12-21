@@ -99,15 +99,15 @@ a:link {
 
 }
 .icone-processo{
-  width:25px;
+  width:20px;
   margin-right: 20px;
   transition: all 0.1s linear;
 }
 
-.icone-processo:hover{
+/* .icone-processo:hover{
   width: 30px;
   transition: all 0.1s linear;
-}
+} */
 /* PPC */
 .header-ppc{
   background-color: #1b2e4f;

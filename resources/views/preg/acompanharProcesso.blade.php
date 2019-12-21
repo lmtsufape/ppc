@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
     {{-- Título do processo --}}
         <div class="titulo-tabela-lmts">
-            <h2>ACOMPANHAR PROCESSOS</h2>
+            <h2>ACOMPANHAR PPC</h2>
         </div>
     </div>
     {{-- Informações do processo --}}
@@ -33,44 +33,44 @@
 
             <div class="accordion" id="accordion">
                 
-                @for ($i = 0; $i < 5; $i++)
+                
                     {{-- 1 --}}
                     <div class="card">
-                        <div class="card-header" id="heading{{$i}}">
+                        <div class="card-header" id="heading1">
                                 <div class="col-sm-12">
-                                    <a data-toggle="collapse" href="#collapseProcesso{{$i}}" 
-                                    role="button" aria-expanded="false" aria-controls="collapseProcesso{{$i}}">
-                                        <img style="float:left" class="icone-processo" src="{{asset('images/info-circle-solid.svg')}}" alt="">
+                                    <a data-toggle="collapse" href="#collapseProcesso1" 
+                                    role="button" aria-expanded="false" aria-controls="collapseProcesso1">
+                                        <img id="img" style="float:left" class="icone-processo" src="{{asset('images/plus-solid.svg')}}" alt="">
                                     </a>
-                                    <h3>Data: 13/10/2019 (<a href="#">Baixar Versão</a>)</h3>
+                                    Data: 13/10/2019 (<a href="#">Baixar Versão</a>)
                                 </div>
                         </div><!-- end card-header-->
-                        <div id="collapseProcesso{{$i}}" class="collapse" aria-labelledby="heading{{$i}}" data-parent="#accordion">
+                        <div id="collapseProcesso1" class="collapse" aria-labelledby="heading1" data-parent="#accordion">
                             <div class="card-body">
                                 <form action="">
                                     <div class="form-check">
                                         <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CPA (<a href="#">Visualizar</a>)</h4>
+                                            Parecer CPA (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CPE (<a href="#">Visualizar</a>)</h4>
+                                        <input style="" class="" type="checkbox" value="" id="defaultCheck2">
+                                        <label class="form-check-label" for="defaultCheck2">
+                                            Parecer CPE (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CGE (<a href="#">Visualizar</a>)</h4>
+                                        <input style="" class="" type="checkbox" value="" id="defaultCheck3">
+                                        <label class="form-check-label" for="defaultCheck3">
+                                            Parecer CGE (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
                                 </form>
                             </div>
                         </div><!-- end colapse1-->
                     </div><!-- end card-->
-                @endfor
+                
                 
                 
                 
@@ -79,5 +79,18 @@
     </div>
 </div>
 
+<script>
+    $(document).ready(function(){
+        $('#img').click(function(){
+            if($(this).attr("src") == "{{asset('images/plus-solid.svg')}}"){
+                
+                $(this).attr("src", "{{asset('images/minus-solid.svg')}}" );
+            }else{
+                $(this).attr("src", "{{asset('images/plus-solid.svg')}}" );
+            }
+        });
+
+    });
+</script>
     
 @endsection
