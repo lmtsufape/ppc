@@ -19,7 +19,7 @@
   <div class="row justify-content-center">
       <div class="col-sm-4">
           <div class="card-ppc" >
-            <a href="{{ route('ppc.cadastrar') }}">
+            <a id="link-card" href="{{ route('ppc.cadastrar') }}">
               <div class="card-ppc-body">
                 <img class="icone" src="{{asset('images/new_file.png')}}" >
               </div>
@@ -30,7 +30,7 @@
 
       <div class="col-sm-4">
           <div class="card-ppc" >
-            <a href="#">
+            <a id="link-card" href="#">
               <div class="card-ppc-body">
                 <img class="icone" src="{{asset('images/folder.png')}}" >
               </div>
@@ -42,7 +42,7 @@
   </div>
 
   <div class="row justify-content-center">
-    <a class="btn btn-ppc-processo" href="{{ route('coordenador.verProcessos') }}">
+    <a id="white" class="btn btn-ppc-processo" href="{{ route('coordenador.verProcessos') }}">
       PROCESSOS ABERTOS
     </a>
 
