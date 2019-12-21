@@ -49,20 +49,23 @@
                             <div class="card-body">
                                 <form action="">
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                        
                                         <label class="form-check-label" for="defaultCheck1">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                             Parecer CPA (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck2">
+                                        
                                         <label class="form-check-label" for="defaultCheck2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                             Parecer CPE (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck3">
+                                        
                                         <label class="form-check-label" for="defaultCheck3">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                                             Parecer CGE (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>

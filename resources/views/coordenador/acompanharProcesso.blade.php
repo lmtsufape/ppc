@@ -57,8 +57,8 @@
                                     <div class="form-check">
                                       @if($arquivo->parecer)
                                         @foreach($arquivo->parecer as $parecer)
-                                          @if($parecer->tipo == 'CPA')
-                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                          @if($parecer->tipo == 'CPA')                                          
+                                            <input disabled @if($parecer->status == true) checked @endif style="" name="inlineRadioOptions" class="" type="radio" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
                                                 Parecer CPA (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
                                                 
@@ -66,7 +66,8 @@
                                           @endif
                                         @endforeach
                                       @else
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                      
+                                        <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
                                             Parecer CPA (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
                                             
@@ -77,7 +78,7 @@
                                       @if($arquivo->parecer)
                                         @foreach($arquivo->parecer as $parecer)
                                           @if($parecer->tipo == 'CPE')
-                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" name="inlineRadioOptions" type="radio" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
                                                 Parecer CPE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
                                                 
@@ -85,7 +86,7 @@
                                           @endif
                                         @endforeach
                                       @else
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                        <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
                                             Parecer CPE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
                                             
@@ -96,7 +97,7 @@
                                       @if($arquivo->parecer)
                                         @foreach($arquivo->parecer as $parecer)
                                           @if($parecer->tipo == 'CGE')
-                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="radio" name="inlineRadioOptions" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
                                                 Parecer CGE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
                                                 
@@ -104,7 +105,7 @@
                                           @endif
                                         @endforeach
                                       @else
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                        <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
                                             Parecer CGE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
                                             
@@ -140,10 +141,10 @@
 
                                 <label style="margin-top:20px"><h4>Parecer CPA</h4></label>
                                 <div class="form-check">
-                                    <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                    <input style="" class="" type="radio" name="inlineRadioOptions" value="" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">Aceito</div>
                                 <div class="form-check">
-                                    <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                    <input style="" class="" type="radio" name="inlineRadioOptions" value="" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">Enviar para revisão</label>
                                 </div>
 

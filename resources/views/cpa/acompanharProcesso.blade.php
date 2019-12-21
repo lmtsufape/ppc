@@ -49,22 +49,22 @@
                             <div class="card-body">
                                 <form action="">
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                             Parecer CPA (<a href="#">Visualizar</a>)
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar Arquivo</button>
                                             
                                         </label>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar Arquivo</button>
                                     </div>
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                             Parecer CPE (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                                             Parecer CGE (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
@@ -79,7 +79,7 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Parecer</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>

@@ -40,32 +40,32 @@
                                 <div class="col-sm-12">
                                     <a data-toggle="collapse" href="#collapseProcesso{{$i}}" 
                                     role="button" aria-expanded="false" aria-controls="collapseProcesso{{$i}}">
-                                        <img id="img" style="float:left" class="icone-processo" src="{{asset('images/info-circle-solid.svg')}}" alt="">
+                                        <img id="img" style="float:left" class="icone-processo" src="{{asset('images/plus-solid.svg')}}" alt="">
                                     </a>
-                                    <h3>Data: 13/10/2019 (<a href="#">Baixar Versão</a>)</h3>
+                                    Data: 13/10/2019 (<a href="#">Baixar Versão</a>)
                                 </div>
                         </div><!-- end card-header-->
                         <div id="collapseProcesso{{$i}}" class="collapse" aria-labelledby="heading{{$i}}" data-parent="#accordion">
                             <div class="card-body">
                                 <form action="">
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CPA (<a href="#">Visualizar</a>)
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                            Parecer CPA (<a href="#">Visualizar</a>)
                                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar Arquivo</button>
-                                            </h4>
+                                            
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CPE (<a href="#">Visualizar</a>)</h4>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                            Parecer CPE (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CGE (<a href="#">Visualizar</a>)</h4>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                            Parecer CGE (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
                                 </form>
