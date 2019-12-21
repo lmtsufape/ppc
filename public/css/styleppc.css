@@ -6,9 +6,12 @@
   margin-bottom: 1%;
   /* margin-left: 20px; */
   border-bottom: #1b2e4f solid 2px;
-
-
 }
+
+th, td{
+  text-align:center;
+}
+
 .card-ppc{
   height: 300px;
   width: 300px;
