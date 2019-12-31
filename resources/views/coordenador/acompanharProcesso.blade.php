@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
     {{-- Título do processo --}}
         <div class="titulo-tabela-lmts">
-            <h2>ACOMPANHAR PROCESSOS</h2>
+            <h2>ACOMPANHAR PPC</h2>
         </div>
     </div>
     {{-- Informações do processo --}}
@@ -40,7 +40,7 @@
                                 <div class="col-sm-12">
                                     <a data-toggle="collapse" href="#collapseProcesso{{$i}}"
                                     role="button" aria-expanded="false" aria-controls="collapseProcesso{{$i}}">
-                                        <img style="float:left" class="icone-processo" src="{{asset('images/info-circle-solid.svg')}}" alt="">
+                                        <img id="img" style="float:left" class="icone-processo" src="{{asset('images/plus-solid.svg')}}" alt="">
                                     </a>
                                     <?php
                                       $date = date_create($arquivo->update_at);
@@ -48,7 +48,7 @@
                                     ?>
 
                                     {{ $date }}
-                                    <h3>Data: {{$date}} (<a href="{{ route('download', ['file' => $arquivo->anexo])}}">Baixar Versão</a>)</h3>
+                                    Data: {{$date}} (<a href="{{ route('download', ['file' => $arquivo->anexo])}}">Baixar Versão</a>)
                                 </div>
                         </div><!-- end card-header-->
                         <div id="collapseProcesso{{$i}}" class="collapse" aria-labelledby="heading{{$i}}" data-parent="#accordion">
@@ -57,19 +57,20 @@
                                     <div class="form-check">
                                       @if($arquivo->parecer)
                                         @foreach($arquivo->parecer as $parecer)
-                                          @if($parecer->tipo == 'CPA')
-                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                          @if($parecer->tipo == 'CPA')                                          
+                                            <input disabled @if($parecer->status == true) checked @endif style="" name="inlineRadioOptions" class="" type="radio" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
-                                                <h4>Parecer CPA (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
-                                                </h4>
+                                                Parecer CPA (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                                
                                             </label>
                                           @endif
                                         @endforeach
                                       @else
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                      
+                                        <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CPA (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
-                                            </h4>
+                                            Parecer CPA (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                            
                                         </label>
                                       @endif
                                     </div>
@@ -77,18 +78,18 @@
                                       @if($arquivo->parecer)
                                         @foreach($arquivo->parecer as $parecer)
                                           @if($parecer->tipo == 'CPE')
-                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" name="inlineRadioOptions" type="radio" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
-                                                <h4>Parecer CPE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
-                                                </h4>
+                                                Parecer CPE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                                
                                             </label>
                                           @endif
                                         @endforeach
                                       @else
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                        <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CPE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
-                                            </h4>
+                                            Parecer CPE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                            
                                         </label>
                                       @endif
                                     </div>
@@ -96,18 +97,18 @@
                                       @if($arquivo->parecer)
                                         @foreach($arquivo->parecer as $parecer)
                                           @if($parecer->tipo == 'CGE')
-                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                            <input disabled @if($parecer->status == true) checked @endif style="" class="" type="radio" name="inlineRadioOptions" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
-                                                <h4>Parecer CGE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
-                                                </h4>
+                                                Parecer CGE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                                
                                             </label>
                                           @endif
                                         @endforeach
                                       @else
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                        <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CGE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
-                                            </h4>
+                                            Parecer CGE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                            
                                         </label>
                                       @endif
                                     </div>
@@ -140,10 +141,10 @@
 
                                 <label style="margin-top:20px"><h4>Parecer CPA</h4></label>
                                 <div class="form-check">
-                                    <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                    <input style="" class="" type="radio" name="inlineRadioOptions" value="" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">Aceito</div>
                                 <div class="form-check">
-                                    <input style="" class="" type="checkbox" value="" id="defaultCheck1">
+                                    <input style="" class="" type="radio" name="inlineRadioOptions" value="" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">Enviar para revisão</label>
                                 </div>
 
@@ -162,6 +163,19 @@
     </div>
 </div>
 
+<script>
+    $(document).ready(function(){
+        $('#img').click(function(){
+            if($(this).attr("src") == "{{asset('images/plus-solid.svg')}}"){
+                
+                $(this).attr("src", "{{asset('images/minus-solid.svg')}}" );
+            }else{
+                $(this).attr("src", "{{asset('images/plus-solid.svg')}}" );
+            }
+        });
 
+    });
+</script>
+    
 
 @endsection

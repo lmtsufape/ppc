@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
     {{-- Título do processo --}}
         <div class="titulo-tabela-lmts">
-            <h2>ACOMPANHAR PROCESSOS</h2>
+            <h2>ACOMPANHAR PPC</h2>
         </div>
     </div>
     {{-- Informações do processo --}}
@@ -33,53 +33,53 @@
 
             <div class="accordion" id="accordion">
                 
-                @for ($i = 0; $i < 5; $i++)
+                
                     {{-- 1 --}}
                     <div class="card">
-                        <div class="card-header" id="heading{{$i}}">
+                        <div class="card-header" id="heading1">
                                 <div class="col-sm-12">
-                                    <a data-toggle="collapse" href="#collapseProcesso{{$i}}" 
-                                    role="button" aria-expanded="false" aria-controls="collapseProcesso{{$i}}">
-                                        <img style="float:left" class="icone-processo" src="{{asset('images/info-circle-solid.svg')}}" alt="">
+                                    <a data-toggle="collapse" href="#collapseProcesso1" 
+                                    role="button" aria-expanded="false" aria-controls="collapseProcesso1">
+                                        <img id="img" style="float:left" class="icone-processo" src="{{asset('images/plus-solid.svg')}}" alt="">
                                     </a>
-                                    <h3>Data: 13/10/2019 (<a href="#">Baixar Versão</a>)</h3>
+                                    Data: 13/10/2019 (<a href="#">Baixar Versão</a>)
                                 </div>
                         </div><!-- end card-header-->
-                        <div id="collapseProcesso{{$i}}" class="collapse" aria-labelledby="heading{{$i}}" data-parent="#accordion">
+                        <div id="collapseProcesso1" class="collapse" aria-labelledby="heading1" data-parent="#accordion">
                             <div class="card-body">
                                 <form action="">
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CPA (<a href="#">Visualizar</a>)
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar Arquivo</button>
-                                            </h4>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                            Parecer CPA (<a href="#">Visualizar</a>)
+                                            
+                                        </label>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar Arquivo</button>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                            Parecer CPE (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CPE (<a href="#">Visualizar</a>)</h4>
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input style="" class="" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            <h4>Parecer CGE (<a href="#">Visualizar</a>)</h4>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                            Parecer CGE (<a href="#">Visualizar</a>)
                                         </label>
                                     </div>
                                 </form>
                             </div>
                         </div><!-- end colapse1-->
                     </div><!-- end card-->
-                @endfor
+                
                 
                 {{-- Modal --}}
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Parecer</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -120,5 +120,18 @@
 </div>
 
 
+<script>
+    $(document).ready(function(){
+        $('#img').click(function(){
+            if($(this).attr("src") == "{{asset('images/plus-solid.svg')}}"){
+                
+                $(this).attr("src", "{{asset('images/minus-solid.svg')}}" );
+            }else{
+                $(this).attr("src", "{{asset('images/plus-solid.svg')}}" );
+            }
+        });
 
+    });
+</script>
+    
 @endsection

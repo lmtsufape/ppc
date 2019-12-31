@@ -19,7 +19,7 @@
   <div class="row justify-content-center">
       <div class="col-sm-4">
           <div class="card-ppc" >
-            <a href="{{ route('ppc.cadastrar') }}">
+            <a id="link-card" href="{{ route('ppc.cadastrar') }}">
             <div class="card-ppc-header" ><h3>NOVO<br>PROCESSO</h3></div>
             <div class="card-ppc-body">
               <img src="{{asset('images/new_file.png')}}" >
@@ -30,7 +30,7 @@
 
       <div class="col-sm-4">
           <div class="card-ppc" >
-            <!-- <a href="{{route('nde.reabrirProcesso')}}"> -->
+            <!-- <a id="link-card" href="{{route('nde.reabrirProcesso')}}"> -->
             <div class="card-ppc-header"><h4>RETOMAR<br>PROCESSO</h4></div>
             <div class="card-ppc-body">
               <img src="{{asset('images/folder.png')}}" >
