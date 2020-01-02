@@ -72,6 +72,32 @@ th, td{
   color: #ddd;
   transition: all 0.1s linear;
 }
+.btn-ppc-processo-small{
+
+  height: 45px;
+  margin-top: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  border-radius: 40px;
+  padding: 1% 5% 1%;
+
+  background-color: #1b2e4f;
+  color: white;
+  transition: all 0.1s linear;
+}
+.btn-ppc-processo-small:hover{
+
+  border-radius: 40px;
+  padding: 1% 6% 1%;
+  background-color: #1b2e4f;
+  color: #ddd;
+  transition: all 0.1s linear;
+}
+
 #white{
   color: white;
 }
