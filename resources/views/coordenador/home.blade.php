@@ -3,6 +3,11 @@
 @section('titulo', 'Home')
 
 @section('content')
+
+<style>
+  
+</style>
+
 <div class="container">
 
   <div class="row justify-content-center">
@@ -17,6 +22,18 @@
   </div>
 
   <div class="row justify-content-center">
+      
+      <div class="col-sm-4">
+        <div class="card-ppc" >
+          <a id="link-card" href="{{ route('coordenador.verProcessos') }}">
+            <div class="card-ppc-body">
+              <img class="icone" src="{{asset('images/folder-open-solid.svg')}}" >
+            </div>
+            <div class="card-ppc-header" ><h3>PROCESSOS<br>ABERTOS</h3></div>
+          </a>
+        </div><!-- end card-->
+      </div> 
+
       <div class="col-sm-4">
           <div class="card-ppc" >
             <a id="link-card" href="{{ route('ppc.cadastrar') }}">
@@ -41,12 +58,12 @@
 
   </div>
 
-  <div class="row justify-content-center">
+  {{-- <div class="row justify-content-center">
     <a id="white" class="btn btn-ppc-processo" href="{{ route('coordenador.verProcessos') }}">
       PROCESSOS ABERTOS
     </a>
 
-  </div>
+  </div> --}}
 
 </div>
 @endsection
