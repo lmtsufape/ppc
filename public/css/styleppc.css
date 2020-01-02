@@ -120,6 +120,10 @@ th, td{
 .icone-busca{
   width:30px;
 }
+.icone-eye{
+  margin-left: 10px;
+  width:25px;
+}
 
 /* Processos */
 .row-processo{

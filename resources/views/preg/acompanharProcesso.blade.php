@@ -52,21 +52,30 @@
                                         
                                         <label class="form-check-label" for="defaultCheck1">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                            Parecer CPA (<a href="#">Visualizar</a>)
+                                            Parecer CPA 
+                                            <a href="#">
+                                                <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                            </a>
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         
                                         <label class="form-check-label" for="defaultCheck2">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                            Parecer CPE (<a href="#">Visualizar</a>)
+                                            Parecer CPE
+                                            <a href="#">
+                                                <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                            </a>
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         
                                         <label class="form-check-label" for="defaultCheck3">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                            Parecer CGE (<a href="#">Visualizar</a>)
+                                            Parecer CGE
+                                            <a href="#">
+                                                <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                            </a>
                                         </label>
                                     </div>
                                 </form>

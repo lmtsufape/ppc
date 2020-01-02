@@ -60,7 +60,10 @@
                                           @if($parecer->tipo == 'CPA')                                          
                                             <input disabled @if($parecer->status == true) checked @endif style="" name="inlineRadioOptions" class="" type="radio" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
-                                                Parecer CPA (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                                Parecer CPA 
+                                                <a href="{{ route('download', ['file' => $parecer->anexo])}}">
+                                                    <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                                </a>
                                                 
                                             </label>
                                           @endif
@@ -69,7 +72,10 @@
                                       
                                         <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            Parecer CPA (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                            Parecer CPA 
+                                            <a href="{{ route('download', ['file' => $parecer->anexo])}}">
+                                                <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                            </a>
                                             
                                         </label>
                                       @endif
@@ -80,7 +86,10 @@
                                           @if($parecer->tipo == 'CPE')
                                             <input disabled @if($parecer->status == true) checked @endif style="" class="" name="inlineRadioOptions" type="radio" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
-                                                Parecer CPE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                                Parecer CPE 
+                                                <a href="{{ route('download', ['file' => $parecer->anexo])}}">
+                                                    <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                                </a>
                                                 
                                             </label>
                                           @endif
@@ -88,7 +97,10 @@
                                       @else
                                         <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            Parecer CPE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                            Parecer CPE 
+                                            <a href="{{ route('download', ['file' => $parecer->anexo])}}">
+                                                <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                            </a>
                                             
                                         </label>
                                       @endif
@@ -99,7 +111,10 @@
                                           @if($parecer->tipo == 'CGE')
                                             <input disabled @if($parecer->status == true) checked @endif style="" class="" type="radio" name="inlineRadioOptions" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
-                                                Parecer CGE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                                Parecer CGE 
+                                                <a href="{{ route('download', ['file' => $parecer->anexo])}}">
+                                                    <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                                </a>
                                                 
                                             </label>
                                           @endif
@@ -107,7 +122,10 @@
                                       @else
                                         <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            Parecer CGE (<a href="{{ route('download', ['file' => $parecer->anexo])}}">Visualizar</a>)
+                                            Parecer CGE 
+                                            <a href="{{ route('download', ['file' => $parecer->anexo])}}">
+                                                <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                            </a>
                                             
                                         </label>
                                       @endif
