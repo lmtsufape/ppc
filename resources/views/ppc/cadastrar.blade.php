@@ -53,7 +53,7 @@
                                 <strong>{{ $message }}</strong>
                               </span>
                               @enderror
-                              
+                              <small id="emailHelp" class="form-text text-muted">O arquivo deve ser menor do que 6mb.</small>
                             </div>
                           
                         </div>
@@ -63,7 +63,6 @@
                     <div class="row justify-content-center">
 
                       <button onclick="event.preventDefault();confirmar();" id="buttonFinalizar" class="btn btn-ppc-processo-small">
-
                         FINALIZAR
                       </button>
                     </div>
