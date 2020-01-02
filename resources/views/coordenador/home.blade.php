@@ -47,9 +47,9 @@
 
       <div class="col-sm-4">
           <div class="card-ppc" >
-            <a id="link-card" href="#">
+          <a id="link-card" href="{{route('ppc.reabrir')}}">
               <div class="card-ppc-body">
-                <img class="icone" src="{{asset('images/folder.png')}}" >
+                <img class="icone-retomar" src="{{asset('images/retomar-file-regular.svg')}}" >
               </div>
               <div class="card-ppc-header"><h3>RETOMAR<br>PROCESSO</h3></div>
           </a>
