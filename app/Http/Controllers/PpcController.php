@@ -54,5 +54,8 @@ class PpcController extends Controller
     return redirect()->route('home');
 
   }
+  public function indexReabrirPpc(){
+    return view('nde.reabrirProcesso');
+  }
 
 }

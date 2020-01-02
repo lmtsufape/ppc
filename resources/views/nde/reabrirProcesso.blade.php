@@ -35,7 +35,7 @@
 
 
                     <div class="row justify-content-center">
-                      <button type="submit" class="btn btn-ppc-processo">
+                      <button type="submit" class="btn btn-ppc-processo-small">
                         BUSCAR
                       </button>
                     </div>
