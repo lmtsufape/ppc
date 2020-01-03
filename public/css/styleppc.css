@@ -97,7 +97,9 @@ th, td{
   color: #ddd;
   transition: all 0.1s linear;
 }
-
+#btn-nova-versao{
+  margin-left: 25%;
+}
 #white{
   color: white;
 }
@@ -185,5 +187,10 @@ th, td{
   }
   .card-ppc{
     margin-left: 15px;
+  }
+
+  #btn-nova-versao{
+    margin-left: 0;
+    width: 100vw;
   }
 }
