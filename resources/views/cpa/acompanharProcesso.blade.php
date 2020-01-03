@@ -51,7 +51,10 @@
                                     <div class="form-check">
                                         <label class="form-check-label" for="defaultCheck1">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                            Parecer CPA (<a href="#">Visualizar</a>)
+                                            Parecer CPA
+                                            <a href="#">
+                                                <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                            </a>
                                             
                                         </label>
                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar Arquivo</button>
@@ -59,13 +62,19 @@
                                     <div class="form-check">
                                         <label class="form-check-label" for="defaultCheck1">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                            Parecer CPE (<a href="#">Visualizar</a>)
+                                            Parecer CPE
+                                            <a href="#">
+                                                <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                            </a>
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="defaultCheck1">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                            Parecer CGE (<a href="#">Visualizar</a>)
+                                            Parecer CGE
+                                            <a href="#">
+                                                <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                                            </a>
                                         </label>
                                     </div>
                                 </form>
@@ -92,8 +101,10 @@
                                     <div class="custom-file">
                                         <label class="custom-file-label" for="inputGroupFile01">Carregar Arquivo</label>
                                         <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" lang="pt">
+                                        <small id="emailHelp" class="form-text text-muted">O arquivo deve ser menor do que 6mb.</small>
                                     </div>
                                 </div>
+                                <small id="emailHelp" class="form-text text-muted">O arquivo deve ser menor do que 6mb.</small>
                                 
                                 <label style="margin-top:20px"><h4>Parecer CPA</h4></label>
                                 <div class="form-check">

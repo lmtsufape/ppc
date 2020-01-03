@@ -35,8 +35,8 @@
 
 
                     <div class="row justify-content-center">
-                      <button type="submit" class="btn btn-ppc-processo">
-                        BUSCAR
+                      <button type="submit" class="btn btn-ppc-processo-small">
+                        BUSCAR PPC
                       </button>
                     </div>
                   </form>

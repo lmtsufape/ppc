@@ -41,28 +41,28 @@
                   <form method="POST" action="{{ route("ppc.criar") }}" enctype="multipart/form-data" id="formCadastro">
                     <div class="row">
                       {{ csrf_field() }}
-                      <div class="form-group {{ $errors->has('arquivo') ? ' has-error' : '' }}">
-                        <div class="col-sm-12">
-                          <label for="arquivo" class="control-label">Anexo</label>
-                        </div>
-                        <div class="col-sm-12" style="width: 100%">
-                          <div class="custom-file">
-                            <input type="file" class="filestyle" data-placeholder="Nenhum arquivo" data-text="Selecionar" data-btnClass="btn-primary-lmts" name="arquivo">
-                            @error('arquivo')
-                            <span class="invalid-feedback" role="alert" style="overflow: visible; display:block">
-                              <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
+                      <div class="col-sm-12">
 
-                          </div>
+                        <div class="form-group {{ $errors->has('arquivo') ? ' has-error' : '' }}">
+                          
+                            <label for="arquivo" class="control-label">Anexo</label>
+                            <div class="custom-file">
+                              <input type="file" class="filestyle" data-placeholder="Nenhum arquivo" data-text="Selecionar" data-btnClass="btn-primary-lmts" name="arquivo">
+                              @error('arquivo')
+                              <span class="invalid-feedback" role="alert" style="overflow: visible; display:block">
+                                <strong>{{ $message }}</strong>
+                              </span>
+                              @enderror
+                              <small id="emailHelp" class="form-text text-muted">O arquivo deve ser menor do que 6mb.</small>
+                            </div>
+                          
                         </div>
                       </div>
                     </div>
 
                     <div class="row justify-content-center">
 
-                      <button onclick="event.preventDefault();confirmar();" id="buttonFinalizar" class="btn btn-ppc-processo">
-
+                      <button onclick="event.preventDefault();confirmar();" id="buttonFinalizar" class="btn btn-ppc-processo-small">
                         FINALIZAR
                       </button>
                     </div>

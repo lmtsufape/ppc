@@ -92,6 +92,7 @@
                                     <div class="custom-file">
                                         <label class="custom-file-label" for="inputGroupFile01">Carregar Arquivo</label>
                                         <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" lang="pt">
+                                        <small id="emailHelp" class="form-text text-muted">O arquivo deve ser menor do que 6mb.</small>
                                     </div>
                                 </div>
                                 

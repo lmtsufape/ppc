@@ -48,7 +48,7 @@
                   <td> {{ $processo->status }} </td>
                   <td>
                     <a href="{{ route('coordenador.acompanharProcesso', ['idProcesso' => $processo->id]) }}">
-                      Visualizar
+                      Ver Detalhes
                     </a>
                   </td>
                   <td>

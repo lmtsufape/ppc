@@ -52,10 +52,11 @@ Route::get( '/login',    'HomeController@irParaLogin')->name('login');
   Route::get('/coordenador/verProcessos',           'CoordenadorController@verProcessos'  )->name('coordenador.verProcessos');
   Route::get('/coordenador/acompanharProcesso',     'CoordenadorController@acompanhar'    )->name('coordenador.acompanharProcesso');
 
+
   // rotas para ppc
   Route::get('/coordenador/ppc/cadastrar',          'PpcController@cadastrar'             )->name('ppc.cadastrar');
   Route::post('/coordenador/ppc/criar',             'PpcController@criar'                 )->name('ppc.criar');
-
+  Route::get('/coordenador/ppc/reabrir',            'PpcController@indexReabrirPpc'       )->name('ppc.reabrir');  
   // rota downloadArquivo
   Route::get('/downloadArquivo',                    'HomeController@downloadArquivo'      )->name('download');
 

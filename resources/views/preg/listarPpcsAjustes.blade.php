@@ -26,7 +26,7 @@
                 <th>CURSO</th>
                 <th>ANO</th>
                 <th>ÚLTIMA ATUALIZAÇÃO</th>
-                <th>LOCALIZAÇÃO</th>
+                
                 <th>DOWNLOAD</th>
             </thead>
 
@@ -36,7 +36,7 @@
                     <td><a href="{{route('preg.acompanharProcesso')}}">Pedagogia</a></td>
                     <td>2019</td>
                     <td>10/10/2019</td>
-                    <td>PREG - CPA</td>
+                    
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
@@ -47,7 +47,7 @@
                     <td><a href="{{route('preg.acompanharProcesso')}}">Ciências da Computação</a></td>
                     <td>2019</td>
                     <td>19/10/2019</td>
-                    <td>NDE</td>
+                    
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
@@ -58,7 +58,7 @@
                     <td><a href="{{route('preg.acompanharProcesso')}}">Letras</a></td>
                     <td>2019</td>
                     <td>16/10/2019</td>
-                    <td>PREG - CGE</td>
+                    
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
@@ -70,7 +70,7 @@
                     <td><a href="{{route('preg.acompanharProcesso')}}">Engenharia de Alimentos</a></td>
                     <td>2019</td>
                     <td>21/10/2019</td>
-                    <td>CTA</td>
+                    
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
