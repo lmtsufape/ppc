@@ -4,9 +4,18 @@
 <div class="container">
     <div class="row justify-content-center">
     {{-- Título do processo --}}
+        
         <div class="titulo-tabela-lmts">
-            <h2>ACOMPANHAR PPC</h2>
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>ACOMPANHAR PPC</h2>
+                </div>
+                <div class="col-sm-3">
+                    <a id="btn-nova-versao" href="" class="btn btn-primary">Nova Versão</a>
+                </div>
+            </div>
         </div>
+
     </div>
     {{-- Informações do processo --}}
     <div class="row info-processo">
