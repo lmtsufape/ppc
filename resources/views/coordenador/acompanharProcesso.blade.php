@@ -1,17 +1,62 @@
 @extends('layouts.app')
 @section('content')
 
+{{-- Modal --}}
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <form method="POST" action="{{ route('coordenador.novaVersao') }}" enctype="multipart/form-data" id="formErrata">
+    @csrf
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Enviar nova versão</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12">
+
+              <div class="form-group {{ $errors->has('arquivo') ? ' has-error' : '' }}">
+
+                  <label for="arquivo" class="control-label">Anexo</label>
+                  <div class="custom-file">
+                    <input type="hidden" name="idProcesso" value="{{$ppc->id}}">
+                    <input type="file" class="filestyle" data-placeholder="Nenhum arquivo" data-text="Selecionar" data-btnClass="btn-primary-lmts" name="arquivo">
+                    @error('arquivo')
+                    <span class="invalid-feedback" role="alert" style="overflow: visible; display:block">
+                      <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    <small id="emailHelp" class="form-text text-muted">O arquivo deve ser menor do que 6mb.</small>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button onclick="event.preventDefault();confirmarErrata();" type="button" class="btn btn-primary">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
 <div class="container">
     <div class="row justify-content-center">
     {{-- Título do processo --}}
-        
+
         <div class="titulo-tabela-lmts">
             <div class="row">
                 <div class="col-sm-9">
                     <h2>ACOMPANHAR PPC</h2>
                 </div>
                 <div class="col-sm-3">
-                    <a id="btn-nova-versao" href="" class="btn btn-primary">Nova Versão</a>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar Arquivo</button>
+                    <!-- <a id="btn-nova-versao" href="{{ route('coordenador.novaVersao', ['idProcesso' => $ppc->id]) }}" class="btn btn-primary">Nova Versão</a> -->
                 </div>
             </div>
         </div>
@@ -52,11 +97,10 @@
                                         <img id="img" style="float:left" class="icone-processo" src="{{asset('images/plus-solid.svg')}}" alt="">
                                     </a>
                                     <?php
-                                      $date = date_create($arquivo->update_at);
+                                      $date = date_create($arquivo->created_at);
                                       $date = date_format($date, 'd/m/Y');
                                     ?>
 
-                                    {{ $date }}
                                     Data: {{$date}} (<a href="{{ route('download', ['file' => $arquivo->anexo])}}">Baixar Versão</a>)
                                 </div>
                         </div><!-- end card-header-->
@@ -66,26 +110,26 @@
                                     <div class="form-check">
                                       @if($arquivo->parecer)
                                         @foreach($arquivo->parecer as $parecer)
-                                          @if($parecer->tipo == 'CPA')                                          
+                                          @if($parecer->tipo == 'CPA')
                                             <input disabled @if($parecer->status == true) checked @endif style="" name="inlineRadioOptions" class="" type="radio" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
-                                                Parecer CPA 
+                                                Parecer CPA
                                                 <a href="{{ route('download', ['file' => $parecer->anexo])}}">
                                                     <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
                                                 </a>
-                                                
+
                                             </label>
                                           @endif
                                         @endforeach
                                       @else
-                                      
+
                                         <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            Parecer CPA 
+                                            Parecer CPA
                                             <a href="{{ route('download', ['file' => $parecer->anexo])}}">
                                                 <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
                                             </a>
-                                            
+
                                         </label>
                                       @endif
                                     </div>
@@ -95,22 +139,22 @@
                                           @if($parecer->tipo == 'CPE')
                                             <input disabled @if($parecer->status == true) checked @endif style="" class="" name="inlineRadioOptions" type="radio" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
-                                                Parecer CPE 
+                                                Parecer CPE
                                                 <a href="{{ route('download', ['file' => $parecer->anexo])}}">
                                                     <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
                                                 </a>
-                                                
+
                                             </label>
                                           @endif
                                         @endforeach
                                       @else
                                         <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            Parecer CPE 
+                                            Parecer CPE
                                             <a href="{{ route('download', ['file' => $parecer->anexo])}}">
                                                 <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
                                             </a>
-                                            
+
                                         </label>
                                       @endif
                                     </div>
@@ -120,22 +164,22 @@
                                           @if($parecer->tipo == 'CGE')
                                             <input disabled @if($parecer->status == true) checked @endif style="" class="" type="radio" name="inlineRadioOptions" value="" id="defaultCheck1">
                                             <label class="form-check-label" for="defaultCheck1">
-                                                Parecer CGE 
+                                                Parecer CGE
                                                 <a href="{{ route('download', ['file' => $parecer->anexo])}}">
                                                     <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
                                                 </a>
-                                                
+
                                             </label>
                                           @endif
                                         @endforeach
                                       @else
                                         <input style="" class="" type="radio" value="" name="inlineRadioOptions" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            Parecer CGE 
+                                            Parecer CGE
                                             <a href="{{ route('download', ['file' => $parecer->anexo])}}">
                                                 <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
                                             </a>
-                                            
+
                                         </label>
                                       @endif
                                     </div>
@@ -144,47 +188,6 @@
                         </div><!-- end colapse1-->
                     </div><!-- end card-->
                 @endforeach
-
-                {{-- Modal --}}
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                {{-- Escolher arquivo --}}
-                                <div class="input-group">
-
-                                    <div class="custom-file">
-                                        <label class="custom-file-label" for="inputGroupFile01">Carregar Arquivo</label>
-                                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" lang="pt">
-                                        <small id="emailHelp" class="form-text text-muted">O arquivo deve ser menor do que 6mb.</small>
-                                    </div>
-                                </div>
-
-                                <label style="margin-top:20px"><h4>Parecer CPA</h4></label>
-                                <div class="form-check">
-                                    <input style="" class="" type="radio" name="inlineRadioOptions" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">Aceito</div>
-                                <div class="form-check">
-                                    <input style="" class="" type="radio" name="inlineRadioOptions" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">Enviar para revisão</label>
-                                </div>
-
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Confirmar</button>
-                        </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -195,7 +198,7 @@
     $(document).ready(function(){
         $('#img').click(function(){
             if($(this).attr("src") == "{{asset('images/plus-solid.svg')}}"){
-                
+
                 $(this).attr("src", "{{asset('images/minus-solid.svg')}}" );
             }else{
                 $(this).attr("src", "{{asset('images/plus-solid.svg')}}" );
@@ -203,7 +206,12 @@
         });
 
     });
+    function confirmarErrata(){
+      if(confirm("Tem certeza que deseja finalizar?") == true) {
+        document.getElementById("formErrata").submit();
+      }
+    }
 </script>
-    
+
 
 @endsection

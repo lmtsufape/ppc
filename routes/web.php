@@ -38,10 +38,10 @@ Route::get( '/login',    'HomeController@irParaLogin')->name('login');
   Route::get('/cpa/acompanharProcesso',             'CpaController@acompanharProcesso'    )->name('cpa.acompanharProcesso');
 
   // rotas para cge
-  Route::get('/dep/home',                           'DepPregController@index'                 )->name('dep.home');
-  Route::get('/dep/ppc/finalizados',                'DepPregController@finalizados'           )->name('dep.finalizados');
-  Route::get('/dep/ppc/ajustes',                    'DepPregController@ajustes'               )->name('dep.ajustes');
-  Route::get('/dep/acompanharProcesso',             'DepPregController@acompanharProcesso'    )->name('dep.acompanharProcesso');
+  Route::get('/dep/home',                           'DepPregController@index'             )->name('dep.home');
+  Route::get('/dep/ppc/finalizados',                'DepPregController@finalizados'       )->name('dep.finalizados');
+  Route::get('/dep/ppc/ajustes',                    'DepPregController@ajustes'           )->name('dep.ajustes');
+  Route::get('/dep/acompanharProcesso',             'DepPregController@acompanharProcesso')->name('dep.acompanharProcesso');
 
   // rotas para nde
   // Route::get('/nde/home',                           'NdeController@index'                 )->name('nde.home');
@@ -49,14 +49,17 @@ Route::get( '/login',    'HomeController@irParaLogin')->name('login');
 
   // rotas para coordenador
   Route::get('/coordenador/home',                   'CoordenadorController@index'         )->name('coordenador.home');
-  Route::get('/coordenador/verProcessos',           'CoordenadorController@verProcessos'  )->name('coordenador.verProcessos');
-  Route::get('/coordenador/acompanharProcesso',     'CoordenadorController@acompanhar'    )->name('coordenador.acompanharProcesso');
+  Route::get('/coordenador/verAbertos',             'CoordenadorController@verAbertos'    )->name('coordenador.verAbertos');
+  Route::get('/coordenador/verFinalizados',         'CoordenadorController@verFinalizados')->name('coordenador.verFinalizados');
+  Route::get('/coordenador/acompanhar',             'CoordenadorController@acompanhar'    )->name('coordenador.acompanhar');
+  Route::get('/coordenador/retomar',                'CoordenadorController@retomar'       )->name('coordenador.retomar');
+  Route::post('/coordenador/novaVersao',            'CoordenadorController@novaVersao'    )->name('coordenador.novaVersao');
 
 
   // rotas para ppc
   Route::get('/coordenador/ppc/cadastrar',          'PpcController@cadastrar'             )->name('ppc.cadastrar');
   Route::post('/coordenador/ppc/criar',             'PpcController@criar'                 )->name('ppc.criar');
-  Route::get('/coordenador/ppc/reabrir',            'PpcController@indexReabrirPpc'       )->name('ppc.reabrir');  
+  Route::get('/coordenador/ppc/reabrir',            'PpcController@indexReabrirPpc'       )->name('ppc.reabrir');
   // rota downloadArquivo
   Route::get('/downloadArquivo',                    'HomeController@downloadArquivo'      )->name('download');
 

@@ -7,7 +7,7 @@
     <div class="row justify-content-center header-ppc">
         <div class="col-sm-8 item-header-ppc">
 
-            <h3>PPCs abertos - {{$nomeCurso}}</h3>
+            <h3>PPCs finalizados - {{$nomeCurso}}</h3>
 
         </div>
         <div class="col-sm-4 item-header-ppc" >
@@ -24,9 +24,9 @@
         <table id="tabela" class="table table-responsive-lg table-hover table-borderless bg-light">
             <thead align="center">
                 <th>ÚLTIMA ATUALIZAÇÃO</th>
-                <th>STATUS</th>
                 <th>VISUALIZAR</th>
                 <th>DOWNLOAD</th>
+                <th>RETOMAR</th>
             </thead>
 
             <tbody>
@@ -36,6 +36,8 @@
 
                     <?php
                     $date = date_create($processo->update_at);
+                    // dd($processo->updated_at);
+                    // dd($date);
                     $date = date_format($date, 'd/m/Y');
                     ?>
 
@@ -43,7 +45,6 @@
 
                   </td>
 
-                  <td> {{ $processo->status }} </td>
                   <td>
                     <a href="{{ route('coordenador.acompanhar', ['idProcesso' => $processo->id]) }}">
                       <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
@@ -52,6 +53,11 @@
                   <td>
                     <a href="{{ route('download', ['file' => $processo->arquivo[0]->anexo])}}" target="_new">
                       <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="{{ route('coordenador.retomar', ['idProcesso' => $processo->id]) }}">
+                      Retomar
                     </a>
                   </td>
                 </tr>
