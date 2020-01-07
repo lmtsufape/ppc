@@ -32,10 +32,10 @@ Route::get( '/login',    'HomeController@irParaLogin')->name('login');
   Route::get('/preg/acompanharProcesso',            'PregController@acompanharProcesso'   )->name('preg.acompanharProcesso');
 
   // rotas para cpa
-  Route::get('/cpa/home',                           'CpaController@index'                 )->name('cpa.home');
-  Route::get('/cpa/ppc/finalizados',                'CpaController@finalizados'           )->name('cpa.finalizados');
-  Route::get('/cpa/ppc/ajustes',                    'CpaController@ajustes'               )->name('cpa.ajustes');
-  Route::get('/cpa/acompanharProcesso',             'CpaController@acompanharProcesso'    )->name('cpa.acompanharProcesso');
+  Route::get('/cpga/home',                           'CpaController@index'                 )->name('cpa.home');
+  Route::get('/cpga/ppc/finalizados',                'CpaController@finalizados'           )->name('cpa.finalizados');
+  Route::get('/cpga/ppc/ajustes',                    'CpaController@ajustes'               )->name('cpa.ajustes');
+  Route::get('/cpga/acompanharProcesso',             'CpaController@acompanharProcesso'    )->name('cpa.acompanharProcesso');
 
   // rotas para cge
   Route::get('/dep/home',                           'DepPregController@index'             )->name('dep.home');

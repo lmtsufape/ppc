@@ -33,7 +33,7 @@ class HomeController extends Controller
         if(session('tipoNome') == 'CPE'){
           return view('cpe.home');
         }
-        if(session('tipoNome') == 'CAPR'){
+        if(session('tipoNome') == 'CPGA'){
           return redirect()->route('cpa.home');
         }
         // if(session('tipoNome') == 'CPE'){
