@@ -91,8 +91,8 @@
                             <div class="col-sm-8">
 
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                     <label class="form-check-label" for="remember">
+                                        <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                         {{ __('Lembre-se de mim') }}
                                     </label>
                                 </div>
