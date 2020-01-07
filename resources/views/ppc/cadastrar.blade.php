@@ -53,7 +53,7 @@
                                 <strong>{{ $message }}</strong>
                               </span>
                               @enderror
-                              <small id="emailHelp" class="form-text text-muted">O arquivo deve ser menor do que 6mb.</small>
+                              <small id="emailHelp" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small>
                             </div>
                           
                         </div>

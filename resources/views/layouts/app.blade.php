@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Titulo -->
-    <title>@yield('titulo') | Nome do Sistema</title>
+    <title>@yield('titulo') | SGPPC</title>
 
     <!-- Scripts -->
     <script defer="defer" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
