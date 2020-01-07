@@ -16,7 +16,6 @@
         <div class="modal-body">
           <div class="row">
             <div class="col-sm-12">
-
               <div class="form-group {{ $errors->has('arquivo') ? ' has-error' : '' }}">
 
                   <label for="arquivo" class="control-label">Anexo</label>
@@ -28,7 +27,7 @@
                       <strong>{{ $message }}</strong>
                     </span>
                     @enderror
-                    <small id="emailHelp" class="form-text text-muted">O arquivo deve ser menor do que 6mb.</small>
+                    <small class="form-text text-muted">O arquivo deve ser menor do que 6mb.</small>
                   </div>
 
               </div>
@@ -211,6 +210,7 @@
         document.getElementById("formErrata").submit();
       }
     }
+
 </script>
 
 
