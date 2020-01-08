@@ -45,7 +45,7 @@
 
                 <td> {{ $processo->status }} </td>
                 <td>
-                  <a href="{{ route('preg.acompanharProcesso', ['idProcesso' => $processo->id]) }}">
+                  <a href="{{ route('cge.acompanharProcesso', ['idProcesso' => $processo->id]) }}">
                     <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
                   </a>
                 </td>

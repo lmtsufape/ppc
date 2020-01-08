@@ -6,7 +6,7 @@
     <div class="row justify-content-center header-ppc">
         <div class="col-sm-4 item-header-ppc">
             
-            <h3>PPC'S - Ajustes</h3>
+            <h3>PPC'S - Finalizados</h3>
             
         </div>
         <div class="col-sm-4"></div>
@@ -25,18 +25,18 @@
             <thead>
                 <th>CURSO</th>
                 <th>ANO</th>
-                <th>ÚLTIMA ATUALIZAÇÃO</th>
-                <th>LOCALIZAÇÃO</th>
+                <th>N° DO PROCESSO</th>
+                <th>STATUS</th>
                 <th>DOWNLOAD</th>
             </thead>
 
             <tbody>
                 
                 <tr>
-                    <td><a href="{{route('cpa.acompanharProcesso')}}">Pedagogia</a></td>
+                    <td>Pedagogia</td>
                     <td>2019</td>
-                    <td>10/10/2019</td>
-                    <td>PREG - CPA</td>
+                    <td>201912132</td>
+                    <td>Disponível</td>
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
@@ -44,10 +44,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="{{route('cpa.acompanharProcesso')}}">Ciências da Computação</a></td>
+                    <td>Ciências da Computação</td>
                     <td>2019</td>
-                    <td>19/10/2019</td>
-                    <td>NDE</td>
+                    <td>201912564</td>
+                    <td>Disponível</td>
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
@@ -55,22 +55,21 @@
                     </td>
                 </tr>    
                 <tr>
-                    <td><a href="{{route('cpa.acompanharProcesso')}}">Letras</a></td>
+                    <td>Letras</td>
                     <td>2019</td>
-                    <td>16/10/2019</td>
-                    <td>PREG - CGE</td>
+                    <td>201912142</td>
+                    <td>Disponível</td>
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
                         </a>
                     </td>
                 </tr>
-
                 <tr>
-                    <td><a href="{{route('cpa.acompanharProcesso')}}">Engenharia de Alimentos</a></td>
+                    <td>Engenharia de Pesca</td>
                     <td>2019</td>
-                    <td>21/10/2019</td>
-                    <td>CTA</td>
+                    <td>201912133</td>
+                    <td>Disponível</td>
                     <td>
                         <a href="">
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">

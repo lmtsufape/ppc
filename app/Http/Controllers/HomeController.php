@@ -30,15 +30,15 @@ class HomeController extends Controller
         if(session('tipoNome') == 'PREG'){
           return redirect()->route('preg.home');
         }
-        if(session('tipoNome') == 'CPE'){
-          return view('cpe.home');
+        if(session('tipoNome') == 'CGE'){
+          return redirect()->route('cge.home');
         }
         if(session('tipoNome') == 'CPGA'){
-          return redirect()->route('cpa.home');
+          return redirect()->route('cpga.home');
         }
-        // if(session('tipoNome') == 'CPE'){
-        //   return redirect()->route('nde.home');
-        // }
+        if(session('tipoNome') == 'CAPR'){
+          return redirect()->route('capr.home');
+        }
         if(session('tipoNome') == 'coordenador'){
           return redirect()->route('coordenador.home');
         }

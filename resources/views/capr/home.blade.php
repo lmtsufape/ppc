@@ -19,7 +19,7 @@
   <div class="row justify-content-center">
       <div class="col-sm-4">
           <div class="card-ppc" >
-          <a id="link-card" href="{{route('cpa.ajustes')}}">
+          <a id="link-card" href="{{route('capr.ajustes')}}">
             <div class="card-ppc-body">
               <img class="icone" src="{{asset('images/edit-solid.svg')}}" >
 
@@ -31,7 +31,7 @@
 
       <div class="col-sm-4">
           <div class="card-ppc" >
-            <a id="link-card" href="{{route('cpa.finalizados')}}">
+            <a id="link-card" href="{{route('capr.finalizados')}}">
               <div class="card-ppc-body">
                 <img class="icone" src="{{asset('images/download-solid.svg')}}"  >
 
