@@ -50,9 +50,22 @@
                     </a>
                   </td>
                   <td>
-                    <a href="{{ route('download', ['file' => $processo->arquivo[0]->anexo])}}" target="_new">
-                      <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
-                    </a>
+                    <div class="input-group">
+                      
+                      <select class="custom-select" style="width:50px" required>
+                        <option value="" desabled selected>Selecionar Versão PPC</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <div class="input-group-append">
+                        <a href="{{ route('download', ['file' => $processo->arquivo[0]->anexo])}}" target="_new">
+                          <button class="btn btn-outline-secondary" type="button">
+                              <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
+                          </button>
+                        </a>
+                      </div>
+                    </div>
                   </td>
                 </tr>
               @endforeach
