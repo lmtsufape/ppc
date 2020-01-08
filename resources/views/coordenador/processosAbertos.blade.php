@@ -51,16 +51,21 @@
                   </td>
                   <td>
                     <div class="input-group">
-                      
+
                       <select class="custom-select" style="width:50px" required>
                         <option value="" desabled selected>Selecionar Versão PPC</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        @foreach($processo->arquivo as $key)
+                          <?php
+                          $date = date_create($key->created_at);
+                          $date = date_format($date, 'd/m/Y');
+                          ?>
+                          <option onclick="versaoDownload('{{$key->anexo}}');" >{{$date}}</option>
+                        @endforeach
+
                       </select>
                       <div class="input-group-append">
-                        <a href="{{ route('download', ['file' => $processo->arquivo[0]->anexo])}}" target="_new">
-                          <button class="btn btn-outline-secondary" type="button">
+                        <a href="{{ route('download')}}">
+                          <button onclick="event.preventDefault(); document.getElementById('versaoForm').submit();" class="btn btn-outline-secondary" type="button">
                               <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
                           </button>
                         </a>
@@ -69,7 +74,9 @@
                   </td>
                 </tr>
               @endforeach
-
+              <form id="versaoForm" action="{{ route('download') }}" method="GET" target="_new" style="display: none;">
+                <input type="hidden" value="" name="file" id="versaoString">
+              </form>
 
             </tbody>
         </table>
@@ -81,9 +88,12 @@
 
 
 <script>
-
+    function versaoDownload(x){
+      document.getElementById('versaoString').value = x;
+    }
     // Usa a biblioteca quicksearch para buscar dados na tabela
     $('input#inputBusca').quicksearch('table#tabela tbody tr');
 
 </script>
+
 @endsection
