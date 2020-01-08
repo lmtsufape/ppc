@@ -2,85 +2,73 @@
 
 @section('content')
 
+
 <div class="container">
     <div class="row justify-content-center header-ppc">
-        <div class="col-sm-4 item-header-ppc">
-            
-            <h3>PPC'S - Finalizados</h3>
-            
+        <div class="col-sm-8 item-header-ppc">
+
+            <h3>PPCs finalizados</h3>
+
         </div>
-        <div class="col-sm-4"></div>
         <div class="col-sm-4 item-header-ppc" >
             <div class="input-group">
                 <input id="inputBusca" type="text"  class="form-control" placeholder="Buscar Curso, Ano, N° do Processo ou Status">
             </div>
-        
+
         </div>
-        
+
     </div>
 
 
     <div class="row justify-content-center">
         <table id="tabela" class="table table-responsive-lg table-hover table-borderless bg-light">
-            <thead>
-                <th>CURSO</th>
-                <th>ANO</th>
-                <th>N° DO PROCESSO</th>
-                <th>STATUS</th>
+            <thead align="center">
+                <th>ÚLTIMA ATUALIZAÇÃO</th>
+                <th>VISUALIZAR</th>
                 <th>DOWNLOAD</th>
+                <th>RETOMAR</th>
             </thead>
 
             <tbody>
-                
-                <tr>
-                    <td>Pedagogia</td>
-                    <td>2019</td>
-                    <td>201912132</td>
-                    <td>Disponível</td>
-                    <td>
-                        <a href="">
-                            <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
-                        </a>
-                    </td>
+              @foreach($processos as $processo)
+                <tr align="center">
+                  <td>
+
+                    <?php
+                    $date = date_create($processo->update_at);
+                    // dd($processo->updated_at);
+                    // dd($date);
+                    $date = date_format($date, 'd/m/Y');
+                    ?>
+
+                    {{ $date }}
+
+                  </td>
+
+                  <td>
+                    <a href="{{ route('cpga.acompanharProcesso', ['idProcesso' => $processo->id]) }}">
+                      <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="{{ route('download', ['file' => $processo->arquivo[0]->anexo])}}" target="_new">
+                      <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="{{ route('coordenador.retomar', ['idProcesso' => $processo->id]) }}">
+                      Retomar
+                    </a>
+                  </td>
                 </tr>
-                <tr>
-                    <td>Ciências da Computação</td>
-                    <td>2019</td>
-                    <td>201912564</td>
-                    <td>Disponível</td>
-                    <td>
-                        <a href="">
-                            <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
-                        </a>
-                    </td>
-                </tr>    
-                <tr>
-                    <td>Letras</td>
-                    <td>2019</td>
-                    <td>201912142</td>
-                    <td>Disponível</td>
-                    <td>
-                        <a href="">
-                            <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Engenharia de Pesca</td>
-                    <td>2019</td>
-                    <td>201912133</td>
-                    <td>Disponível</td>
-                    <td>
-                        <a href="">
-                            <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
-                        </a>
-                    </td>
-                </tr>
+              @endforeach
+
+
             </tbody>
         </table>
 
     </div>
-    
+
 
 </div>
 

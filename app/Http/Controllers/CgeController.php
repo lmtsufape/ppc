@@ -24,7 +24,10 @@ class CgeController extends Controller
 
     // lista os ppcs finalizados
     public function finalizados(Request $request){
-      return view('cge.listarPpcsFinalizados');
+      $processos = Ppc::where('status', 'finalizado')->orderBy('updated_at', 'desc')->get();
+      return view('cge.listarPpcsFinalizados', [
+                                                'processos' => $processos,
+                                               ]);
     }
 
     public function ajustes(Request $request){
@@ -46,6 +49,38 @@ class CgeController extends Controller
                                                       'nomeCurso'   => $nomeCurso,
                                                       'nomeUnidade' => $nomeUnidade,
                                                     ]);
+    }
+
+    private function checkFinalizado($arquivoId, $ppcId){
+      $arquivo = Arquivo::find($arquivoId);
+      $parecers = $arquivo->parecer;
+      $parecerCGE = false;
+      $parecerCPGA = false;
+      $parecerCAPR = false;
+      if($parecers->count() > 0){
+        foreach ($parecers as $key) {
+          if($key->tipo == 'CGE'){
+            if($key->status == true){
+              $parecerCGE = true;
+            }
+          }
+          if($key->tipo == 'CPGA'){
+            if($key->status == true){
+              $parecerCPGA = true;
+            }
+          }
+          if($key->tipo == 'CAPR'){
+            if($key->status == true){
+              $parecerCAPR = true;
+            }
+          }
+        }
+      }
+      if($parecerCGE && $parecerCPGA && $parecerCAPR){
+        $ppc = Ppc::find($ppcId);
+        $ppc->status = 'finalizado';
+        $ppc->save();
+      }
     }
 
     public function novoParecer(Request $request){
@@ -74,7 +109,7 @@ class CgeController extends Controller
         'anexo'     => $path . $nome,
         'arquivoId' => $request->arquivoId,
       ]);
-
+      $this->checkFinalizado($request->arquivoId, $ppc->id);
       return redirect()->route('cge.acompanharProcesso', ['idProcesso'=>$ppc->id]);
     }
 }

@@ -20,9 +20,13 @@ class PregController extends Controller
   }
 
   // lista os ppcs finalizados
-  public function finalizados(){
-    return view('preg.listarPpcsFinalizados');
+  public function finalizados(Request $request){
+    $processos = Ppc::where('status', 'finalizado')->orderBy('updated_at', 'desc')->get();
+    return view('preg.listarPpcsFinalizados', [
+                                              'processos' => $processos,
+                                             ]);
   }
+
   public function ajustes(Request $request){
     $processos = Ppc::where('status', 'processando')->get();
     return view('preg.listarPpcsAjustes', [
