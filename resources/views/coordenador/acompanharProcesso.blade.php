@@ -93,7 +93,7 @@
                                 <div class="col-sm-12">
                                     <a data-toggle="collapse" href="#collapseProcesso{{$i}}"
                                     role="button" aria-expanded="false" aria-controls="collapseProcesso{{$i}}">
-                                        <img id="img" style="float:left" class="icone-processo" src="{{asset('images/plus-solid.svg')}}" alt="">
+                                        <img id="img" style="float:left" class="icone-processo" alt="">
                                     </a>
                                     <?php
                                       $date = date_create($arquivo->created_at);
@@ -222,7 +222,8 @@
 
 <script>
     $(document).ready(function(){
-        $('#img').click(function(){
+        $('.icone-processo').attr("src","{{asset('images/plus-solid.svg')}}");
+        $('.icone-processo').click(function(){
             if($(this).attr("src") == "{{asset('images/plus-solid.svg')}}"){
 
                 $(this).attr("src", "{{asset('images/minus-solid.svg')}}" );
