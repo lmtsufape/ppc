@@ -127,13 +127,16 @@
 
     <div id="page-container">
 
-      <div id="content-wrap">
+      <div id="content-wrap" style="height:80vh">
         @yield('content')
-        <br>
+        {{-- <br> --}}
         <!-- <br><br><br> -->
+
+        <div id="footer-brasil"></div>
       </div>
 
-      <div id="footer-brasil"></div>
+      
+
 
     </div>
 
