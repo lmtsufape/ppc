@@ -65,7 +65,7 @@
                       </select>
                       <div class="input-group-append">
                         <a href="{{ route('download')}}">
-                          <button onclick="event.preventDefault(); document.getElementById('versaoForm').submit();" class="btn btn-outline-secondary" type="button">
+                          <button onclick="event.preventDefault(); submitFormDownload();" class="btn btn-outline-secondary" type="button">
                               <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
                           </button>
                         </a>
@@ -91,6 +91,13 @@
     function versaoDownload(x){
       document.getElementById('versaoString').value = x;
     }
+
+    function submitFormDownload(){
+      if(document.getElementById('versaoString').value != ''){
+        document.getElementById('versaoForm').submit();
+      }
+    }
+
     // Usa a biblioteca quicksearch para buscar dados na tabela
     $('input#inputBusca').quicksearch('table#tabela tbody tr');
 

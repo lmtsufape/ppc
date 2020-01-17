@@ -5,18 +5,18 @@
 <div class="container">
     <div class="row justify-content-center header-ppc">
         <div class="col-sm-4 item-header-ppc">
-            
+
             <h3>PPC'S - Ajustes</h3>
-            
+
         </div>
         <div class="col-sm-4"></div>
         <div class="col-sm-4 item-header-ppc" >
             <div class="input-group">
                 <input id="inputBusca" type="text"  class="form-control" placeholder="Buscar Curso, Ano, N° do Processo ou Status">
             </div>
-        
+
         </div>
-        
+
     </div>
 
 
@@ -31,7 +31,7 @@
             </thead>
 
             <tbody>
-                
+
                 <tr>
                     <td><a href="{{route('cpa.acompanharProcesso')}}">Pedagogia</a></td>
                     <td>2019</td>
@@ -53,7 +53,7 @@
                             <img src="{{asset('images/download-solid.svg')}}" style="width:20px">
                         </a>
                     </td>
-                </tr>    
+                </tr>
                 <tr>
                     <td><a href="{{route('cpa.acompanharProcesso')}}">Letras</a></td>
                     <td>2019</td>
@@ -81,7 +81,7 @@
         </table>
 
     </div>
-    
+
 
 </div>
 
