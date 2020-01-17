@@ -176,7 +176,8 @@
 
 <script>
     $(document).ready(function(){
-        $('#img').click(function(){
+        $('.icone-processo').attr("src","{{asset('images/plus-solid.svg')}}");
+        $('.icone-processo').click(function(){
             if($(this).attr("src") == "{{asset('images/plus-solid.svg')}}"){
 
                 $(this).attr("src", "{{asset('images/minus-solid.svg')}}" );
