@@ -32,7 +32,7 @@ class PpcController extends Controller
 
   public function criar(Request $request){
     $validatedData = $request->validate([
-      'arquivo' => ['file', 'mimes:pdf'],
+      'arquivo' => ['required', 'file', 'mimes:pdf'],
       // 'ano'     => ['required', 'string'],
     ]);
     $ppc = Ppc::create([

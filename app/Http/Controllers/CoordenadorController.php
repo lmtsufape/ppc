@@ -64,7 +64,7 @@ class CoordenadorController extends Controller
 
   public function novaVersao(Request $request){
     $validatedData = $request->validate([
-      'arquivo' => ['file', 'mimes:pdf'],
+      'arquivo' => ['required', 'file', 'mimes:pdf'],
     ]);
 
     $ppc = Ppc::find($request->idProcesso);
