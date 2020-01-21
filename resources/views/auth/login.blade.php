@@ -15,8 +15,8 @@
     width: 100vw;
   }
   .card{
-    margin-top: 15%;
-    /* margin-bottom: 10%; */
+    margin-top: 40px;
+    margin-bottom: 20px;
     box-shadow: 1px 1px 20px black;
 
   }
