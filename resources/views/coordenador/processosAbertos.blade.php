@@ -12,7 +12,7 @@
         </div>
         <div class="col-sm-4 item-header-ppc" >
             <div class="input-group">
-                <input id="inputBusca" type="text"  class="form-control" placeholder="Buscar Curso, Ano, N° do Processo ou Status">
+                <input id="inputBusca" type="text"  class="form-control" placeholder="Buscar por Data ou Status do Processo">
             </div>
 
         </div>
