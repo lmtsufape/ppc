@@ -12,7 +12,7 @@
         <div class="col-sm-4"></div>
         <div class="col-sm-4 item-header-ppc" >
             <div class="input-group">
-                <input id="inputBusca" type="text"  class="form-control" placeholder="Buscar Curso, Ano, N° do Processo ou Status">
+                <input id="inputBusca" type="text"  class="form-control" placeholder="Buscar por Data ou Status do Processo">
             </div>
 
         </div>
@@ -88,6 +88,8 @@
 
 
 <script>
+    // Usa a biblioteca quicksearch para buscar dados na tabela
+    $('input#inputBusca').quicksearch('table#tabela tbody tr');
     function versaoDownload(x){
       document.getElementById('versaoString').value = x;
     }
@@ -96,8 +98,6 @@
         document.getElementById('versaoForm').submit();
       }
     }
-    // Usa a biblioteca quicksearch para buscar dados na tabela
-    $('input#inputBusca').quicksearch('table#tabela tbody tr');
 
 </script>
 @endsection
