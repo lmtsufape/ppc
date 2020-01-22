@@ -30,7 +30,11 @@
     margin-bottom: 30px;
 
   }
-
+    /* div#wrapper-footer-brasil{
+        width: 100%;
+        position: fixed;
+        background-color: aqua;
+    } */
   @media screen and (max-width: 576px){
     .container{
       margin-bottom: 80px;

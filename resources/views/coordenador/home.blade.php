@@ -21,7 +21,7 @@
 
   </div>
 
-  <div class="row justify-content-center">
+  <div class="row justify-content-center ">
 
       <div class="col-sm-4">
         <div class="card-ppc" >

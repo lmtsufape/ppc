@@ -126,18 +126,12 @@
 
 
     <div id="page-container">
-
-      <div id="content-wrap" style="height:80vh">
-        @yield('content')
-        {{-- <br> --}}
-        <!-- <br><br><br> -->
-
+      
+      @yield('content')
+      
+      <div id="content-wrap" style="height:15vh">
+        <div id="footer-brasil"></div>
       </div>
-      
-      <div id="footer-brasil"></div>
-      
-
-
     </div>
 
   </div>
