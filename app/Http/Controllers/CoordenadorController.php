@@ -7,6 +7,7 @@ use Lmts\src\controller\LmtsApi;
 use Illuminate\Support\Facades\Storage;
 use App\Ppc;
 use App\Arquivo;
+use App\User;
 
 
 class CoordenadorController extends Controller
@@ -56,6 +57,8 @@ class CoordenadorController extends Controller
   }
 
   public function retomar(Request $request){
+    $this->authorize('reabrirPpc', User::class);
+
     $ppc = Ppc::find($request->idProcesso);
     $ppc->status = 'processando';
     $ppc->save();
@@ -63,6 +66,8 @@ class CoordenadorController extends Controller
   }
 
   public function novaVersao(Request $request){
+    $this->authorize('novaVersaoPpc', User::class);
+
     $validatedData = $request->validate([
       'arquivo' => ['required', 'file', 'mimes:pdf'],
     ]);

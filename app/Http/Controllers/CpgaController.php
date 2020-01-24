@@ -85,6 +85,8 @@ class CpgaController extends Controller
 
 
     public function novoParecer(Request $request){
+      $this->authorize('parecerCpga', Parecer::class);
+
       $validatedData = $request->validate([
         'arquivo' => ['required', 'file', 'mimes:pdf'],
         'parecer' => ['required'],

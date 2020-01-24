@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use Lmts\src\controller\LmtsApi;
 use App\Ppc;
 use App\Arquivo;
+use App\User;
 
 class PpcController extends Controller
 {
@@ -31,6 +32,8 @@ class PpcController extends Controller
   }
 
   public function criar(Request $request){
+    $this->authorize('abrirPpc', User::class);
+
     $validatedData = $request->validate([
       'arquivo' => ['required', 'file', 'mimes:pdf'],
       // 'ano'     => ['required', 'string'],

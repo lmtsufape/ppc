@@ -85,6 +85,8 @@ class CaprController extends Controller
 
 
     public function novoParecer(Request $request){
+      $this->authorize('parecerCapr', Parecer::class);
+
       $validatedData = $request->validate([
         'arquivo' => ['required', 'file', 'mimes:pdf'],
         'parecer' => ['required'],

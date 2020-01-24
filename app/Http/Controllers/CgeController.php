@@ -84,6 +84,8 @@ class CgeController extends Controller
     }
 
     public function novoParecer(Request $request){
+      $this->authorize('parecerCge', Parecer::class);
+
       $validatedData = $request->validate([
         'arquivo' => ['required', 'file', 'mimes:pdf'],
         'parecer' => ['required'],
