@@ -49,6 +49,44 @@
     </div>
 </div>
 
+{{-- Modal 2 --}}
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModal1Label">Parecer</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form method="POST" action="{{ route('cge.modificarArquivo') }}" enctype="multipart/form-data" id="formErrata1">
+              <input type="hidden" value="" name="arquivoId" id="arquivoId1">
+              <input type="hidden" value="{{$ppc->id}}" name="ppcId">
+              @csrf
+                {{-- Escolher arquivo --}}
+                <div class="input-group">
+
+                    <div class="custom-file">
+                        <label class="custom-file-label" for="inputGroupFile02">Carregar Arquivo</label>
+                        <input type="file" class="custom-file-input" id="inputGroupFile02" aria-describedby="inputGroupFileAddon01" lang="pt" name="arquivo">
+                        <small id="emailHelp1" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small>
+                    </div>
+                </div>
+                <small id="emailHelp1" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small>
+
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button onclick="event.preventDefault();confirmarNovoArquivo();" type="button" class="btn btn-primary">Confirmar</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="container">
     <div class="row justify-content-center">
     {{-- Título do processo --}}
@@ -180,17 +218,20 @@
                                               <a>
                                                 <img class="icone-eye" src="{{asset('images/check-solid.svg')}}" alt="">
                                               </a>
+
                                             @endif
                                             @if($parecer->status == false)
                                               <a>
                                                 <img class="icone-eye" src="{{asset('images/times-solid.svg')}}" alt="">
                                               </a>
+
                                             @endif
                                             <label class="form-check-label" for="defaultCheck1">
                                                 Parecer CGE
                                                 <a href="{{ route('download', ['file' => $parecer->anexo])}}">
                                                     <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
                                                 </a>
+                                                <button type="button" class="btn btn-primary" onclick="mudarArquivoId1({{$arquivo->id}})" data-toggle="modal" data-target="#exampleModal1">Modificar Arquivo</button>
 
                                             </label>
                                           @endif
@@ -224,9 +265,19 @@
       document.getElementById("arquivoId").value = x;
     }
 
+    function mudarArquivoId1(x){
+      document.getElementById("arquivoId1").value = x;
+    }
+
     function confirmarErrata(){
       if(confirm("Tem certeza que deseja finalizar?") == true) {
         document.getElementById("formErrata").submit();
+      }
+    }
+
+    function confirmarNovoArquivo(){
+      if(confirm("Tem certeza que deseja finalizar?") == true) {
+        document.getElementById("formErrata1").submit();
       }
     }
 

@@ -35,6 +35,7 @@ Route::get( '/login',                                'HomeController@irParaLogin
   Route::get( '/cpga/ppc/verAbertos',                'CpgaController@ajustes'               )->name('cpga.ajustes');
   Route::get( '/cpga/acompanharProcesso',            'CpgaController@acompanharProcesso'    )->name('cpga.acompanharProcesso');
   Route::post('/cpga/novoParecer',                   'CpgaController@novoParecer'           )->name('cpga.novoParecer');
+  Route::post('/cpga/modificarArquivo',              'CpgaController@modificarArquivo'      )->name('cpga.modificarArquivo');
 
   // rotas para capr
   Route::get( '/capr/home',                          'CaprController@index'                 )->name('capr.home');
@@ -42,6 +43,7 @@ Route::get( '/login',                                'HomeController@irParaLogin
   Route::get( '/capr/ppc/verAbertos',                'CaprController@ajustes'               )->name('capr.ajustes');
   Route::get( '/capr/acompanharProcesso',            'CaprController@acompanharProcesso'    )->name('capr.acompanharProcesso');
   Route::post('/capr/novoParecer',                   'CaprController@novoParecer'           )->name('capr.novoParecer');
+  Route::post('/capr/modificarArquivo',              'CaprController@modificarArquivo'      )->name('capr.modificarArquivo');
 
   // rotas para cge
   Route::get( '/cge/home',                           'CgeController@index'                  )->name('cge.home');
@@ -49,6 +51,7 @@ Route::get( '/login',                                'HomeController@irParaLogin
   Route::get( '/cge/ppc/verAbertos',                 'CgeController@ajustes'                )->name('cge.ajustes');
   Route::get( '/cge/acompanharProcesso',             'CgeController@acompanharProcesso'     )->name('cge.acompanharProcesso');
   Route::post('/cge/novoParecer',                    'CgeController@novoParecer'            )->name('cge.novoParecer');
+  Route::post('/cge/modificarArquivo',               'CgeController@modificarArquivo'       )->name('cge.modificarArquivo');
 
   // rotas para dep
   Route::get('/dep/home',                            'DepPregController@index'              )->name('dep.home');

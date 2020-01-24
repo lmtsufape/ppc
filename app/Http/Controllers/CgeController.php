@@ -114,4 +114,21 @@ class CgeController extends Controller
       $this->checkFinalizado($request->arquivoId, $ppc->id);
       return redirect()->route('cge.acompanharProcesso', ['idProcesso'=>$ppc->id]);
     }
+
+    public function modificarArquivo(Request $request){
+      $this->authorize('parecerCge', Parecer::class);
+
+      $validatedData = $request->validate([
+        'arquivo' => ['required', 'file', 'mimes:pdf'],
+      ]);
+
+      $ppc = Ppc::find($request->ppcId);
+
+      $file = $request->arquivo;
+      $path = $ppc->cursoId . '/' . $ppc->id . '/parecer' . '/' . $request->arquivoId . '/';
+      $nome = "cge.pdf";
+      Storage::putFileAs($path, $file, $nome);
+      $this->checkFinalizado($request->arquivoId, $ppc->id);
+      return redirect()->route('cge.acompanharProcesso', ['idProcesso'=>$ppc->id]);
+    }
 }
