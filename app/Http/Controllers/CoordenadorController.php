@@ -25,7 +25,7 @@ class CoordenadorController extends Controller
   public function verAbertos(Request $request){
       $nomeCurso = $this->api->getPais(6, session('unidadeOrgId'));
       $nomeCurso = $nomeCurso[0]['nome'];
-      $processos = Ppc::where('cursoId', session('unidadeOrgId'))->where('status', 'processando')->get();
+      $processos = Ppc::where('cursoId', session('unidadeOrgId'))->where('status', 'processando')->orderBy('updated_at', 'desc')->get();
       return view('coordenador.processosAbertos', [
                                                     'nomeCurso' => $nomeCurso,
                                                     'processos' => $processos,
