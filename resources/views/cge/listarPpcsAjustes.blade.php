@@ -53,7 +53,7 @@
                   <div class="input-group">
 
                     <select class="custom-select" style="width:50px" required>
-                      <option value="" desabled selected>Selecionar Versão PPC</option>
+                      <option value="" desabled selected>Selecionar Versão</option>
                       @foreach($processo->arquivo as $key)
                         <?php
                         $date = date_create($key->created_at);
@@ -72,12 +72,6 @@
                     </div>
                   </div>
                 </td>
-              </tr>
-              <tr>
-                <td>21/21/2121</td>
-                <td>Finalizado</td>
-                <td> - </td>
-                <td> - </td>
               </tr>
             @endforeach
             <form id="versaoForm" action="{{ route('download') }}" method="GET" target="_new" style="display: none;">

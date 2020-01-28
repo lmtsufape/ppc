@@ -53,7 +53,7 @@
                   <div class="input-group">
 
                     <select class="custom-select" style="width:50px" required>
-                      <option value="" desabled selected>Selecionar Versão PPC</option>
+                      <option value="" desabled selected>Selecionar Versão</option>
                       @foreach($processo->arquivo as $key)
                         <?php
                         $date = date_create($key->created_at);
