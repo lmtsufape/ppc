@@ -9,7 +9,7 @@
     <div class="col-sm-12">
 
       <div class="titulo-tabela-lmts">
-        <h2>PROCESSOS</h2>
+        <h2>PRÉ-PROCESSOS</h2>
       </div>
 
     </div>

@@ -14,7 +14,7 @@
     <div class="col-sm-12">
 
       <div class="titulo-tabela-lmts">
-        <h2>PPCs</h2>
+        <h2>PRÉ-PROCESSOS</h2>
       </div>
 
     </div>

@@ -6,7 +6,7 @@
     <div class="row justify-content-center header-ppc">
         <div class="col-sm-4 item-header-ppc">
 
-            <h3>PPC'S - Ajustes</h3>
+            <h3>PPC's - AJUSTES</h3>
 
         </div>
         <div class="col-sm-4"></div>
@@ -35,7 +35,7 @@
                 <td>
 
                   <?php
-                  $date = date_create($processo->update_at);
+                  $date = date_create($processo->updated_at);
                   $date = date_format($date, 'd/m/Y');
                   ?>
 
@@ -43,7 +43,16 @@
 
                 </td>
 
-                <td> {{ $processo->status }} </td>
+                <td>
+                  <?php
+                  if($processo->status == 'processando'){
+                    echo('Processando');
+                  }
+                  else{
+                    echo('Finalizado');
+                  }
+                  ?>
+                </td>
                 <td>
                   <a href="{{ route('cge.acompanharProcesso', ['idProcesso' => $processo->id]) }}">
                     <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
@@ -52,8 +61,8 @@
                 <td>
                   <div class="input-group">
 
-                    <select class="custom-select" style="width:50px" required>
-                      <option value="" desabled selected>Selecionar Versão</option>
+                    <select class="custom-select" style="width:60px" required>
+                      <option value="" desabled selected>Selecionar Versão PPC</option>
                       @foreach($processo->arquivo as $key)
                         <?php
                         $date = date_create($key->created_at);
