@@ -31,7 +31,7 @@ class CpgaController extends Controller
     }
 
     public function ajustes(Request $request){
-      $processos = Ppc::where('status', 'processando')->get();
+      $processos = Ppc::where('status', 'processando')->orderBy('updated_at', 'desc')->get();
       return view('cpga.listarPpcsAjustes', [
                                             'processos' => $processos,
                                            ]);
