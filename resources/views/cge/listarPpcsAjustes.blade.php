@@ -73,6 +73,12 @@
                   </div>
                 </td>
               </tr>
+              <tr>
+                <td>21/21/2121</td>
+                <td>Finalizado</td>
+                <td> - </td>
+                <td> - </td>
+              </tr>
             @endforeach
             <form id="versaoForm" action="{{ route('download') }}" method="GET" target="_new" style="display: none;">
               <input type="hidden" value="" name="file" id="versaoString">

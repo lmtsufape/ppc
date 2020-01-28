@@ -74,6 +74,7 @@
                   </td>
                 </tr>
               @endforeach
+                
               <form id="versaoForm" action="{{ route('download') }}" method="GET" target="_new" style="display: none;">
                 <input type="hidden" value="" name="file" id="versaoString">
               </form>

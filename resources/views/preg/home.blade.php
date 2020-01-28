@@ -18,7 +18,9 @@
 
   <div class="row justify-content-center">
       <div class="col-sm-4">
-          <div class="card-ppc" >
+        <div class="row justify-content-center">
+
+        <div class="card-ppc" >
           <a id="link-card" href="{{route('preg.ajustes')}}">
             <div class="card-ppc-body">
               <img class="icone" src="{{asset('images/edit-solid.svg')}}" >
@@ -27,9 +29,12 @@
             <div class="card-ppc-header" ><h3>DISPONÍVEL PARA<br>AJUSTES</h3></div>
             </a>
           </div><!-- end card-->
+        </div>
       </div>
 
       <div class="col-sm-4">
+        <div class="row justify-content-center">
+
           <div class="card-ppc" >
             <a id="link-card" href="{{route('preg.finalizados')}}">
               <div class="card-ppc-body">
@@ -39,6 +44,7 @@
               <div class="card-ppc-header"><h3>DISPONÍVEL PARA<br>DOWNLOAD</h3></div>
           </a>
           </div><!-- end card-->
+        </div>
       </div>
 
   </div>

@@ -24,17 +24,22 @@
   <div class="row justify-content-center ">
 
       <div class="col-sm-4">
-        <div class="card-ppc" >
-          <a id="link-card" href="{{ route('coordenador.verAbertos') }}">
-            <div class="card-ppc-body">
-              <img class="icone" src="{{asset('images/folder-open-solid.svg')}}" >
-            </div>
-            <div class="card-ppc-header" ><h3>PPCs<br>ABERTOS</h3></div>
-          </a>
-        </div><!-- end card-->
+        <div class="row justify-content-center">
+
+          <div class="card-ppc" >
+            <a id="link-card" href="{{ route('coordenador.verAbertos') }}">
+              <div class="card-ppc-body">
+                <img class="icone" src="{{asset('images/folder-open-solid.svg')}}" >
+              </div>
+              <div class="card-ppc-header" ><h3>PPCs<br>ABERTOS</h3></div>
+            </a>
+          </div><!-- end card-->
+        </div>
       </div>
 
       <div class="col-sm-4">
+        <div class="row justify-content-center">
+
           <div class="card-ppc" >
             <a id="link-card" href="{{ route('ppc.cadastrar') }}">
               <div class="card-ppc-body">
@@ -43,9 +48,12 @@
               <div class="card-ppc-header" ><h3>NOVO<br>PPC</h3></div>
             </a>
           </div><!-- end card-->
+        </div>
       </div>
 
       <div class="col-sm-4">
+        <div class="row justify-content-center">
+
           <div class="card-ppc" >
           <a id="link-card" href="{{route('coordenador.verFinalizados')}}">
               <div class="card-ppc-body">
@@ -54,6 +62,7 @@
               <div class="card-ppc-header"><h3>RETOMAR<br>PPC</h3></div>
           </a>
           </div><!-- end card-->
+        </div>
       </div>
 
   </div>
