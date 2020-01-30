@@ -6,7 +6,7 @@
     <div class="row justify-content-center header-ppc">
         <div class="col-sm-4 item-header-ppc">
 
-            <h3>PPCs - Ajustes</h3>
+            <h3>PPC's - AJUSTES</h3>
 
         </div>
         <div class="col-sm-4"></div>

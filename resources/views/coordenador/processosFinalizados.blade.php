@@ -7,7 +7,7 @@
     <div class="row justify-content-center header-ppc">
         <div class="col-sm-8 item-header-ppc">
 
-            <h3>PPCs finalizados - {{$nomeCurso}}</h3>
+            <h3>PPC's FINALIZADOS - {{$nomeCurso}}</h3>
 
         </div>
         <div class="col-sm-4 item-header-ppc" >
@@ -54,7 +54,7 @@
                     <div class="input-group">
 
                       <select class="custom-select" style="width:50px" required>
-                        <option value="" desabled selected>Selecionar Versão PPC</option>
+                        <option value="" desabled selected>Selecionar Versão</option>
                         @foreach($processo->arquivo as $key)
                           <?php
                           $date = date_create($key->created_at);

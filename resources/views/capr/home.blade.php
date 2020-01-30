@@ -9,7 +9,7 @@
     <div class="col-sm-12">
 
       <div class="titulo-tabela-lmts">
-        <h2>PPCs</h2>
+        <h2>PRÉ-PROCESSOS</h2>
       </div>
 
     </div>
@@ -18,6 +18,8 @@
 
   <div class="row justify-content-center">
       <div class="col-sm-4">
+        <div class="row justify-content-center">
+
           <div class="card-ppc" >
           <a id="link-card" href="{{route('capr.ajustes')}}">
             <div class="card-ppc-body">
@@ -27,9 +29,12 @@
             <div class="card-ppc-header" ><h3>DISPONÍVEL PARA<br>AJUSTES</h3></div>
             </a>
           </div><!-- end card-->
+        </div>
       </div>
 
       <div class="col-sm-4">
+        <div class="row justify-content-center">
+
           <div class="card-ppc" >
             <a id="link-card" href="{{route('capr.finalizados')}}">
               <div class="card-ppc-body">
@@ -39,6 +44,7 @@
               <div class="card-ppc-header"><h3>DISPONÍVEL PARA<br>DOWNLOAD</h3></div>
           </a>
           </div><!-- end card-->
+        </div>
       </div>
 
   </div>

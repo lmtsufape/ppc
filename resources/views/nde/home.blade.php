@@ -9,7 +9,7 @@
     <div class="col-sm-12">
 
       <div class="titulo-tabela-lmts">
-        <h2>PROCESSOS</h2>
+        <h2>PRÉ-PROCESSOS</h2>
       </div>
 
     </div>
@@ -18,6 +18,8 @@
 
   <div class="row justify-content-center">
       <div class="col-sm-4">
+        <div class="row justify-content-center">
+
           <div class="card-ppc" >
             <a id="link-card" href="{{ route('ppc.cadastrar') }}">
             <div class="card-ppc-header" ><h3>NOVO<br>PROCESSO</h3></div>
@@ -26,9 +28,12 @@
             </div>
             </a>
           </div><!-- end card-->
+        </div>
       </div>
 
       <div class="col-sm-4">
+        <div class="row justify-content-center">
+
           <div class="card-ppc" >
             <!-- <a id="link-card" href="{{route('nde.reabrirProcesso')}}"> -->
             <div class="card-ppc-header"><h4>RETOMAR<br>PROCESSO</h4></div>
@@ -37,6 +42,7 @@
             </div>
           </a>
           </div><!-- end card-->
+        </div>
       </div>
 
   </div>
