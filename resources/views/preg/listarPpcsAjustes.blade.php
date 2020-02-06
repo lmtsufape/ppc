@@ -54,6 +54,11 @@
                   ?>
                 </td>
                 <td>
+                  <a href="{{ route('preg.acompanharProcesso', ['idProcesso' => $processo->id]) }}">
+                    <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
+                  </a>
+                </td>
+                <td>
                   <div class="input-group">
 
                     <select class="custom-select" style="width:60px" required>
