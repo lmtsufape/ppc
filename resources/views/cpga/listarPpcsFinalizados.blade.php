@@ -25,7 +25,7 @@
             <thead align="center">
                 <th>ÚLTIMA ATUALIZAÇÃO</th>
                 <th>VISUALIZAR</th>
-                <th>DOWNLOAD</th>
+                <th>BAIXAR</th>
                 <th>RETOMAR</th>
             </thead>
 

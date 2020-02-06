@@ -72,7 +72,7 @@
             <h3>{{$nomeUnidade}}</h3>
         </div>
         <div class="col-sm-3">
-            N° do Processo
+            N° de Protocolo
             <h3>{{$ppc->id}}</h3>
         </div>
         <div class="col-sm-3">
