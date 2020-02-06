@@ -51,7 +51,7 @@
                                     </a>
                                     <?php
                                       $date = date_create($arquivo->created_at);
-                                      $date = date_format($date, 'd/m/Y');
+                                      $date = date_format($date, 'd/m/Y H:i:s');
                                     ?>
 
                                     Data: {{$date}} (<a href="{{ route('download', ['file' => $arquivo->anexo])}}">Baixar Versão</a>)

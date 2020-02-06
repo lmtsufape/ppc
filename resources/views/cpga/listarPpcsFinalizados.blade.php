@@ -38,7 +38,7 @@
                     $date = date_create($processo->update_at);
                     // dd($processo->updated_at);
                     // dd($date);
-                    $date = date_format($date, 'd/m/Y');
+                    $date = date_format($date, 'd/m/Y H:i:s');
                     ?>
 
                     {{ $date }}
@@ -58,7 +58,7 @@
                         @foreach($processo->arquivo as $key)
                           <?php
                           $date = date_create($key->created_at);
-                          $date = date_format($date, 'd/m/Y');
+                          $date = date_format($date, 'd/m/Y H:i:s');
                           ?>
                           <option onclick="versaoDownload('{{$key->anexo}}');" >{{$date}}</option>
                         @endforeach

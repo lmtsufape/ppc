@@ -36,7 +36,7 @@
 
                     <?php
                     $date = date_create($processo->updated_at);
-                    $date = date_format($date, 'd/m/Y');
+                    $date = date_format($date, 'd/m/Y H:i:s');
                     ?>
 
                     {{ $date }}
@@ -66,7 +66,7 @@
                         @foreach($processo->arquivo as $key)
                           <?php
                           $date = date_create($key->created_at);
-                          $date = date_format($date, 'd/m/Y');
+                          $date = date_format($date, 'd/m/Y H:i:s');
                           ?>
                           <option onclick="versaoDownload('{{$key->anexo}}');" >{{$date}}</option>
                         @endforeach
@@ -83,7 +83,7 @@
                   </td>
                 </tr>
               @endforeach
-                
+
               <form id="versaoForm" action="{{ route('download') }}" method="GET" target="_new" style="display: none;">
                 <input type="hidden" value="" name="file" id="versaoString">
               </form>

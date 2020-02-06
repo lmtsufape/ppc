@@ -42,7 +42,7 @@ class HomeController extends Controller
         if(session('tipoNome') == 'coordenador'){
           return redirect()->route('coordenador.home');
         }
-        return view('home');
+        return view('login');
     }
 
     public function loginApi(Request $request){

@@ -131,7 +131,7 @@
                                     </a>
                                     <?php
                                       $date = date_create($arquivo->created_at);
-                                      $date = date_format($date, 'd/m/Y');
+                                      $date = date_format($date, 'd/m/Y H:i:s');
                                     ?>
 
                                     Data: {{$date}} (<a href="{{ route('download', ['file' => $arquivo->anexo])}}">Baixar Versão</a>)
@@ -195,7 +195,7 @@
                                                   <a href="{{ route('download', ['file' => $parecer->anexo])}}">
                                                       <img class="icone-eye" src="{{asset('images/eye-solid.svg')}}" alt="">
                                                   </a>
-                                                  <button type="button" class="btn btn-primary" onclick="mudarArquivoId1({{$arquivo->id}})" data-toggle="modal" data-target="#exampleModal1">Modificar Arquivo</button>
+                                                  <button type="button" class="btn btn-primary" onclick="mudarArquivoId1({{$arquivo->id}})" data-toggle="modal" data-target="#exampleModal1">Substituir Arquivo</button>
 
                                               </label>
                                             @endif
