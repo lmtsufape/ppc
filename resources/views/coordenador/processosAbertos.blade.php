@@ -26,7 +26,7 @@
                 <th>ÚLTIMA ATUALIZAÇÃO</th>
                 <th>STATUS</th>
                 <th>VISUALIZAR</th>
-                <th>DOWNLOAD</th>
+                <th>BAIXAR</th>
             </thead>
 
             <tbody>
