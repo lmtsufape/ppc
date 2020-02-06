@@ -17,7 +17,7 @@
               <input type="hidden" value="{{$ppc->id}}" name="ppcId">
               @csrf
                 {{-- Escolher arquivo --}}
-                <div class="input-group">
+                {{-- <div class="input-group">
 
                     <div class="custom-file">
                         <label class="custom-file-label" for="inputGroupFile01">Carregar Arquivo</label>
@@ -25,7 +25,18 @@
                         <small id="emailHelp" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small>
                     </div>
                 </div>
-                <small id="emailHelp" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small>
+                <small id="emailHelp" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small> --}}
+                <label for="arquivo" class="control-label">Carregar Arquivo</label>
+                <div class="custom-file">
+                  <input type="file" class="filestyle" data-placeholder="Nenhum arquivo" data-text="Selecionar" data-btnClass="btn-primary-lmts" name="arquivo">
+                  @error('arquivo')
+                  <span class="invalid-feedback" role="alert" style="overflow: visible; display:block">
+                    <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
+                  <small id="emailHelp" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small>
+                </div>
+
 
                 <label style="margin-top:20px"><h4>Parecer CPA</h4></label>
                 @error('parecer')
@@ -65,7 +76,7 @@
               <input type="hidden" value="{{$ppc->id}}" name="ppcId">
               @csrf
                 {{-- Escolher arquivo --}}
-                <div class="input-group">
+                {{-- <div class="input-group">
 
                     <div class="custom-file">
                         <label class="custom-file-label" for="inputGroupFile02">Carregar Arquivo</label>
@@ -73,8 +84,17 @@
                         <small id="emailHelp1" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small>
                     </div>
                 </div>
-                <small id="emailHelp1" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small>
-
+                <small id="emailHelp1" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small> --}}
+                <label for="arquivo" class="control-label">Carregar Arquivo</label>
+                <div class="custom-file">
+                  <input type="file" class="filestyle" data-placeholder="Nenhum arquivo" data-text="Selecionar" data-btnClass="btn-primary-lmts" name="arquivo">
+                  @error('arquivo')
+                  <span class="invalid-feedback" role="alert" style="overflow: visible; display:block">
+                    <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
+                  <small id="emailHelp" class="form-text text-muted">Selecionar arquivo PDF menor do que 6mb.</small>
+                </div>
 
             </form>
         </div>
